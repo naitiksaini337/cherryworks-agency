@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Ignore large media files
+*.mp4
+/public/vids-original/
+/public/vids/
+/vids/

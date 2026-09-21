@@ -1,26 +1,86 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-cherry-bg: #F4F0EC;
+  --color-cherry-text: #3A3537;
+  --color-cherry-dark: #050505;
+  --color-cherry-primary: #7A0F2E;
+  --color-cherry-sakura: #E0A0B0;
+  --color-cherry-border: #E2DDD7;
+  --color-cherry-border-dark: #1F1418;
+  --color-cherry-border-darker: #26151C;
+  --color-cherry-surface: #0A0709;
+  --color-cherry-surface-hover: #120B0E;
+  --color-cherry-muted: #E4DFDD;
+  --color-cherry-gray: #7D7578;
+  --color-cherry-gray-light: #A09895;
+  --color-cherry-gray-lighter: #EAE4E1;
+  --color-cherry-gray-dark: #708070;
+  --color-cherry-surface-card: #0A0507;
+  --color-cherry-border-card: #221419;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --font-serif: 'Instrument Serif', Georgia, serif;
+    --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: var(--font-serif);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Custom editorial typography utilities */
+.font-instrument {
+  font-family: 'Instrument Serif', Georgia, serif;
+}
+
+.font-manrope {
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.font-lora {
+  font-family: var(--font-lora), 'Lora', serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #26161c;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7A0F2E;
+}
+
+/* Botanical grain texture */
+.bg-grain {
+  background-image: radial-gradient(rgba(224, 160, 176, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Animated Gradient Background */
+@keyframes animated-gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.animate-bg-gradient {
+  background-size: 200% 200%;
+  animation: animated-gradient 8s ease infinite;
 }
