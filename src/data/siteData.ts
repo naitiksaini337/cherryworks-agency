@@ -9,7 +9,7 @@ export const BRAND = {
     'Cherryworks is a digital growth studio helping ambitious brands build high-converting websites, stronger identities, smarter social systems, search visibility, and e-commerce experiences.',
   positioning: 'A premium, minimal, conversion-focused digital growth studio.',
   location: 'India / Worldwide',
-  email: 'hello@cherryworks.in',
+  email: 'cherryworksagency@outlook.com',
   whatsappNumber: '+918287464745',
   whatsappDisplay: '+91 8287464745 (WhatsApp Inquiries)',
 };

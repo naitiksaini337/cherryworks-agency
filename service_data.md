@@ -8,7 +8,7 @@
 - **Positioning**: A premium, minimal, conversion-focused digital growth studio.
 - **Description**: Cherryworks is a digital growth studio helping ambitious brands build high-converting websites, stronger identities, smarter social systems, search visibility, and e-commerce experiences.
 - **Location**: India / Worldwide
-- **Email**: hello@cherryworks.in
+- **Email**: cherryworksagency@outlook.com
 - **WhatsApp**: +91 8287464745
 
 ---
