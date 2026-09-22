@@ -157,60 +157,14 @@ export default function HomePage() {
             </p>
           </SlideUp>
 
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <StaggerItem>
-              <ColorCard
-                number="01"
-                heading="AI-Assisted Precision"
-                bullets={[
-                  "AI-driven content & research",
-                  "Faster execution precision",
-                  "High consistency standards",
-                  "Human taste preserved"
-                ]}
-                imgSrc="/images/animated/ai_workflows_cherry_1788300621903.jpg"
-              />
-            </StaggerItem>
-            <StaggerItem>
-              <ColorCard
-                number="02"
-                heading="Conversion-First"
-                bullets={[
-                  "Outcome-driven architecture",
-                  "Clear direct business purpose",
-                  "Turns visitors into leads",
-                  "Scalable paying customer funnels"
-                ]}
-                imgSrc="/images/animated/conversion_cherry_1788300631408.jpg"
-              />
-            </StaggerItem>
-            <StaggerItem>
-              <ColorCard
-                number="03"
-                heading="Automated Workflows"
-                bullets={[
-                  "Automated lead capture",
-                  "Seamless customer communication",
-                  "Instant appointment booking",
-                  "Faster deal-closing sequences"
-                ]}
-                imgSrc="/images/animated/automation_cherry_1788300643563.jpg"
-              />
-            </StaggerItem>
-            <StaggerItem>
-              <ColorCard
-                number="04"
-                heading="Continuous Compounding"
-                bullets={[
-                  "Measurable business outcomes",
-                  "Ongoing workflow improvements",
-                  "Iterative scaling systems",
-                  "Steady revenue growth"
-                ]}
-                imgSrc="/images/animated/brand_performance_cherry_1788300654055.jpg"
-              />
-            </StaggerItem>
-          </StaggerContainer>
+          <SlideUp className="max-w-4xl space-y-8 pt-6">
+            <p className="font-lora text-xl sm:text-2xl text-white/90 leading-relaxed font-light">
+              We reject the bloat of traditional agencies. Instead, we’ve engineered a streamlined studio model that focuses purely on what moves the needle: <strong className="font-medium text-white">elite design, technical excellence, and AI-driven efficiency.</strong>
+            </p>
+            <p className="font-lora text-lg sm:text-xl text-white/70 leading-relaxed">
+              By eliminating unnecessary overhead and focusing strictly on high-leverage deliverables—like bespoke web development, automated SEO, and conversion-first Shopify architecture—we deliver superior digital experiences faster and more cost-effectively. Your brand gets the enterprise-grade infrastructure it needs to scale, without the enterprise-grade friction.
+            </p>
+          </SlideUp>
         </div>
       </section>
 
