@@ -24,6 +24,7 @@ export const Accordion: React.FC<AccordionProps> = ({ items, theme = 'dark' }) =
         return (
           <div
             key={idx}
+            onMouseEnter={() => setOpenIndex(idx)}
             className={`py-5 transition-colors duration-200 ${
               isLight ? 'border-b border-[#050505]/10' : 'border-b border-[#E2DDD7]'
             }`}
