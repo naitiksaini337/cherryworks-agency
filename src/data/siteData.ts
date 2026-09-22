@@ -103,7 +103,7 @@ export const SERVICES_LIST: ServiceDetail[] = [
       'Optional monthly maintenance available from ₹4,000–₹8,000/month (includes website maintenance, content updates, basic SEO updates, bug fixes, and integration monitoring).',
     whatsappMessage: "Hi Cherryworks, I'm interested in Custom Web Development.",
     imgSrc: '/images/animated/web.jpeg',
-    videoSrc: 'https://res.cloudinary.com/w5vliur5/video/upload/f_auto,q_auto/cherryworks-vids/12.mp4',
+    videoSrc: 'https://res.cloudinary.com/w5vliur5/video/upload/f_auto,q_auto/12.mp4',
   },
   {
     id: 'social-media',
@@ -171,7 +171,7 @@ export const SERVICES_LIST: ServiceDetail[] = [
       'Ongoing content maintenance and engagement scaling is baked directly into our monthly retainers. We handle the posting, aesthetic matching, and community interactions so you can focus on building your business.',
     whatsappMessage: "Hi Cherryworks, I'm interested in Social Media Management.",
     imgSrc: '/images/animated/social.jpeg',
-    videoSrc: 'https://res.cloudinary.com/w5vliur5/video/upload/f_auto,q_auto/cherryworks-vids/10.mp4',
+    videoSrc: 'https://res.cloudinary.com/w5vliur5/video/upload/f_auto,q_auto/10.mp4',
   },
   {
     id: 'branding-seo',
@@ -236,7 +236,7 @@ export const SERVICES_LIST: ServiceDetail[] = [
       'Continuous ranking support is built into our packages, covering monthly backlink audits, local SEO schema updates, content freshness checks, and competitor gap analysis to keep your brand at the top.',
     whatsappMessage: "Hi Cherryworks, I'm interested in Branding + SEO.",
     imgSrc: '/images/animated/seo.jpeg',
-    videoSrc: 'https://res.cloudinary.com/w5vliur5/video/upload/f_auto,q_auto/cherryworks-vids/11.mp4',
+    videoSrc: 'https://res.cloudinary.com/w5vliur5/video/upload/f_auto,q_auto/11.mp4',
   },
   {
     id: 'ecommerce',
@@ -326,7 +326,7 @@ export const SERVICES_LIST: ServiceDetail[] = [
       'Monthly maintenance packages available from ₹2,000–₹5,000/month. Special pricing available for student side hustles, campus resell operations, and digital product launches—DM us for discount codes.',
     whatsappMessage: "Hi Cherryworks, I'm interested in Shopify development.",
     imgSrc: '/images/animated/ecom.jpeg',
-    videoSrc: 'https://res.cloudinary.com/w5vliur5/video/upload/f_auto,q_auto/cherryworks-vids/13.mp4',
+    videoSrc: 'https://res.cloudinary.com/w5vliur5/video/upload/f_auto,q_auto/13.mp4',
   },
 ];
 
