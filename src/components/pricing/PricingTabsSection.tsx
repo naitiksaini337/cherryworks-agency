@@ -70,7 +70,7 @@ export const PricingTabsSection: React.FC = () => {
               transition={{ duration: 0.3 }}
               className="space-y-8"
             >
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-8">
                 {SERVICES_LIST.find((s) => s.id === 'social-media')?.packages?.map((tier, idx) => (
                   <PricingCard
                     key={tier.name}
