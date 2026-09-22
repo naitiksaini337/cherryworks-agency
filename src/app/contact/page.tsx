@@ -30,7 +30,7 @@ export default function ContactPage() {
       <section className="relative min-h-[85vh] sm:min-h-screen w-full overflow-hidden flex items-end sm:items-center bg-[#050505]">
         {/* Full-width Video */}
         <video
-          src="/vids/5.mp4"
+          src="https://res.cloudinary.com/w5vliur5/video/upload/f_auto,q_auto/cherryworks-vids/5.mp4"
           autoPlay
           loop
           muted

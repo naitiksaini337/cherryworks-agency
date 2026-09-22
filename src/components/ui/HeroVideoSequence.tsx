@@ -5,7 +5,7 @@ import Link from 'next/link';
 const SEQUENCE = [
   {
     id: '01',
-    videoUrl: '/vids/1.mp4',
+    videoUrl: 'https://res.cloudinary.com/w5vliur5/video/upload/f_auto,q_auto/cherryworks-vids/1.mp4',
     eyebrow: '01 / WEB',
     headline: 'Build beautifully.',
     emphasis: 'Grow intelligently.',
@@ -15,7 +15,7 @@ const SEQUENCE = [
   },
   {
     id: '02',
-    videoUrl: '/vids/2.mp4',
+    videoUrl: 'https://res.cloudinary.com/w5vliur5/video/upload/f_auto,q_auto/cherryworks-vids/2.mp4',
     eyebrow: '02 / GROW',
     headline: 'Open new doors.',
     emphasis: '',
@@ -25,7 +25,7 @@ const SEQUENCE = [
   },
   {
     id: '03',
-    videoUrl: '/vids/3.mp4',
+    videoUrl: 'https://res.cloudinary.com/w5vliur5/video/upload/f_auto,q_auto/cherryworks-vids/3.mp4',
     eyebrow: '03 / AUTOMATE',
     headline: 'Work smarter.',
     emphasis: '',
@@ -35,7 +35,7 @@ const SEQUENCE = [
   },
   {
     id: '04',
-    videoUrl: '/vids/4.mp4',
+    videoUrl: 'https://res.cloudinary.com/w5vliur5/video/upload/f_auto,q_auto/cherryworks-vids/4.mp4',
     eyebrow: '04 / SCALE',
     headline: 'Connect beyond boundaries.',
     emphasis: '',

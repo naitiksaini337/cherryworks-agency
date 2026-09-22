@@ -27,7 +27,7 @@ export function HoverVideo({ src }: { src: string }) {
         muted
         playsInline
         preload="none"
-        poster={src.replace('.mp4', '-poster.jpg')}
+        poster={src.replace('/video/upload/', '/image/upload/').replace('.mp4', '-poster.jpg')}
         className="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-[1.5s]"
       />
     </div>
