@@ -104,7 +104,6 @@
    *Tagline*: Maximum growth velocity and content production
    - Advanced DM automation & lead routing
    - Complete curated account management & profile curation
-   - 30 Highly edited Reels
    - 30 Custom-made Reels
    - 30 Stories
    - 5 High-impact carousels
