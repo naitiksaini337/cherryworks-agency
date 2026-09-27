@@ -52,10 +52,10 @@ export const SERVICES_LIST: ServiceDetail[] = [
       },
       {
         name: 'Starter',
-        price: '₹20,000',
+        price: '₹25,000',
         billingPeriod: 'One-time build',
         isPopular: true,
-        tagline: 'The Sweet Spot. For just ₹8k more, unlock advanced SEO, appointment booking, and automation that turns visitors into actual leads.',
+        tagline: 'The Sweet Spot. For just ₹13k more, unlock advanced SEO, appointment booking, and automation that turns visitors into actual leads.',
         deliverables: [
           '5-6 pages with advanced mobile optimization',
           'Advanced SEO package (content strategy) + Free audit',
