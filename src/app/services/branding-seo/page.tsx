@@ -15,7 +15,8 @@ import {
   PenTool,
   TrendingUp,
   ShieldCheck,
-  Clock
+  Clock,
+  Check
 } from 'lucide-react';
 
 export default function BrandingSeoPage() {
@@ -42,6 +43,59 @@ export default function BrandingSeoPage() {
       subtitle: 'Authoritative content that Google loves and rewards.',
       image: "/images/animated/watercolor/brand_content_1790029617964.jpg",
       color: "#E0A0B0"
+    }
+  ];
+
+  const pricingTiers = [
+    {
+      name: "Basic",
+      price: "₹18,000",
+      period: "/month",
+      description: "Entry-level visibility with basic AI content.",
+      features: [
+        "5 Blogs publishing",
+        "Basic AI visual & content enhancements",
+        "Monthly Reporting"
+      ],
+      isPopular: false
+    },
+    {
+      name: "Starter",
+      price: "₹35,000",
+      period: "/month",
+      description: "Comprehensive SEO foundation for growing brands.",
+      features: [
+        "Full On-Page SEO",
+        "Keyword Research",
+        "SEO Audit & Technical SEO Audit",
+        "15 Blogs publishing",
+        "Website pages creation & content writing",
+        "Topical Authority & Pillar Pages Building",
+        "Off-Page SEO",
+        "Backlink Building (Free Backlinks Only)",
+        "DA and DR Improvement activity"
+      ],
+      isPopular: true
+    },
+    {
+      name: "Advanced",
+      price: "₹47,000",
+      period: "/month",
+      description: "Aggressive SEO strategy with premium outreach.",
+      features: [
+        "Full On-Page SEO",
+        "Keyword Research",
+        "SEO Audit & Technical SEO Audit",
+        "15 Blogs publishing",
+        "Website pages creation & content writing",
+        "Topical Authority & Pillar Pages Building",
+        "Off-Page SEO",
+        "Backlink Building (Free + Paid Niche Relevant)",
+        "Link Exchange",
+        "Guest Post Outreach to relevant sites",
+        "DA and DR Improvement activity"
+      ],
+      isPopular: false
     }
   ];
 
@@ -189,6 +243,57 @@ export default function BrandingSeoPage() {
               <div className="font-lora text-[#A09895]">Rankings achieved consistently</div>
             </div>
           </SlideUp>
+        </div>
+      </section>
+
+      {/* 4.5 PRICING */}
+      <section className="px-5 sm:px-8 lg:px-12 py-24 sm:py-32 bg-[#F4F0EC]">
+        <div className="max-w-7xl mx-auto space-y-16">
+          <SlideUp className="text-center max-w-3xl mx-auto space-y-4">
+            <span className="text-[10px] font-manrope font-bold uppercase tracking-[0.25em] text-[#7A0F2E]">
+              Investment
+            </span>
+            <h2 className="font-instrument text-4xl sm:text-5xl md:text-6xl text-[#050505] tracking-tight">
+              Transparent <span className="italic">Pricing.</span>
+            </h2>
+            <p className="font-lora text-lg text-[#504A4C]">
+              No hidden fees. Choose the tier that fits your growth objectives.
+            </p>
+          </SlideUp>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+            {pricingTiers.map((tier, index) => (
+              <SlideUp key={tier.name} delay={index * 0.1} className={`relative flex flex-col p-8 sm:p-10 rounded-[2px] ${tier.isPopular ? 'bg-[#050505] text-[#FFFFFF] shadow-2xl lg:scale-105 z-10 border border-[#1C1417]' : 'bg-[#FFFFFF] text-[#3A3537] border border-[#E4DFDD]'}`}>
+                {tier.isPopular && (
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#7A0F2E] text-[#FFFFFF] px-4 py-1 text-[10px] font-manrope font-bold uppercase tracking-[0.2em] rounded-full whitespace-nowrap">
+                    Most Popular
+                  </div>
+                )}
+                <div className="mb-8">
+                  <h3 className={`font-instrument text-3xl mb-3 ${tier.isPopular ? 'text-[#E0A0B0]' : 'text-[#050505]'}`}>{tier.name}</h3>
+                  <p className={`font-lora text-sm h-10 ${tier.isPopular ? 'text-[#A09895]' : 'text-[#7D7578]'}`}>{tier.description}</p>
+                </div>
+                <div className="mb-8 flex items-baseline gap-1">
+                  <span className="font-instrument text-4xl sm:text-5xl tracking-tight">{tier.price}</span>
+                  <span className={`font-manrope text-sm font-medium ${tier.isPopular ? 'text-[#A09895]' : 'text-[#7D7578]'}`}>{tier.period}</span>
+                </div>
+                <ul className="space-y-4 mb-10 flex-1">
+                  {tier.features.map((feature, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <Check className={`w-5 h-5 shrink-0 ${tier.isPopular ? 'text-[#E0A0B0]' : 'text-[#7A0F2E]'}`} />
+                      <span className={`font-lora text-sm leading-tight pt-0.5 ${tier.isPopular ? 'text-[#E4DFDD]' : 'text-[#504A4C]'}`}>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <button
+                  onClick={() => router.push('/contact')}
+                  className={`w-full py-4 text-[12px] font-manrope font-bold uppercase tracking-[0.15em] transition-all rounded-[2px] mt-auto ${tier.isPopular ? 'bg-[#FFFFFF] text-[#050505] hover:bg-[#E0A0B0]' : 'bg-[#F4F0EC] text-[#050505] hover:bg-[#050505] hover:text-[#FFFFFF]'}`}
+                >
+                  Get Started
+                </button>
+              </SlideUp>
+            ))}
+          </div>
         </div>
       </section>
 
