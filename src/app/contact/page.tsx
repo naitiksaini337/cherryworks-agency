@@ -1,5 +1,6 @@
 'use client';
 
+import { BackgroundVideo } from '@/components/ui/BackgroundVideo';
 import React from 'react';
 import { useRouter } from 'next/navigation';
 
@@ -29,9 +30,9 @@ export default function ContactPage() {
       {/* ========================================================================= */}
       <section className="relative min-h-[85vh] sm:min-h-screen w-full overflow-hidden flex items-end sm:items-center bg-[#050505]">
         {/* Full-width Video */}
-        <video
+        <BackgroundVideo
           src="https://res.cloudinary.com/w5vliur5/video/upload/f_auto,q_auto/5.mp4"
-          autoPlay
+          
           loop
           muted
           playsInline

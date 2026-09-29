@@ -56,7 +56,8 @@ export const HeroVideoSequence: React.FC = () => {
       if (index === activeIndex) {
         video.currentTime = 0;
         video.play().catch((err) => {
-          console.error("Autoplay prevented:", err);
+          // Swallow the error or just log it to prevent Next.js dev overlay
+          // console.warn("Autoplay prevented:", err);
           // If playback fails, skip to next after a delay to maintain sequence
           setTimeout(() => handleVideoEnd(index), 5000);
         });

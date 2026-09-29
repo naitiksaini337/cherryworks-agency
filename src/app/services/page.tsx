@@ -1,5 +1,6 @@
 'use client';
 
+import { BackgroundVideo } from '@/components/ui/BackgroundVideo';
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
@@ -25,9 +26,9 @@ export default function ServicesOverviewPage() {
     <div className="w-full bg-[#F4F0EC] text-[#3A3537]">
       {/* Page Hero */}
       <section className="relative min-h-[85vh] sm:min-h-screen w-full overflow-hidden flex items-end sm:items-center bg-[#050505] border-b border-[#1C1417]">
-        <video
+        <BackgroundVideo
           src="https://res.cloudinary.com/w5vliur5/video/upload/f_auto,q_auto/8.mp4"
-          autoPlay
+          
           loop
           muted
           playsInline
@@ -63,9 +64,9 @@ export default function ServicesOverviewPage() {
             >
               {srv.videoSrc ? (
                 <div className="w-full h-[250px] md:h-[350px] relative overflow-hidden bg-[#050505]">
-                  <video
+                  <BackgroundVideo
                     src={srv.videoSrc}
-                    autoPlay
+                    
                     loop
                     muted
                     playsInline

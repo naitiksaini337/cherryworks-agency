@@ -1,3 +1,4 @@
+import { BackgroundVideo } from '@/components/ui/BackgroundVideo';
 import React from 'react';
 import { SlideUp } from '@/components/animations/MotionWrappers';
 import { WorkPortfolio } from '@/components/portfolio/WorkPortfolio';
@@ -18,9 +19,9 @@ export default function WorkPage() {
     <div className="w-full min-h-screen bg-[#050505] text-[#E4DFDD]">
       {/* Hero */}
       <section className="relative min-h-[85vh] sm:min-h-screen w-full overflow-hidden flex items-end sm:items-center bg-[#050505] border-b border-[#1C1417]">
-        <video
+        <BackgroundVideo
           src="https://res.cloudinary.com/w5vliur5/video/upload/f_auto,q_auto/7.mp4"
-          autoPlay
+          
           loop
           muted
           playsInline

@@ -1,5 +1,6 @@
 'use client';
 
+import { BackgroundVideo } from '@/components/ui/BackgroundVideo';
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import { SectionLabel } from '@/components/ui/SectionLabel';
@@ -126,9 +127,9 @@ export default function BrandingSeoPage() {
     <div className="w-full bg-[#F4F0EC] text-[#3A3537]">
       {/* 1. HERO SECTION (Outcome-Focused) */}
       <section className="relative min-h-[90vh] w-full overflow-hidden flex items-center bg-[#050505] border-b border-[#1C1417]">
-        <video
+        <BackgroundVideo
           src="https://res.cloudinary.com/w5vliur5/video/upload/f_auto,q_auto/11.mp4"
-          autoPlay
+          
           loop
           muted
           playsInline
