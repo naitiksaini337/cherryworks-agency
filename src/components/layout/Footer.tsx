@@ -83,7 +83,7 @@ export const Footer: React.FC = () => {
                   href="/pricing"
                   className="hover:text-[#FFFFFF] transition-colors"
                 >
-                  Pricing & Packages
+                  Pricing & Bundles
                 </Link>
               </li>
               <li>

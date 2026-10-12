@@ -99,16 +99,6 @@ export default function ServicesOverviewPage() {
                   <p className="font-lora text-[15px] sm:text-[17px] text-[#7D7578] leading-relaxed">
                     {srv.heroSupporting}
                   </p>
-                  {srv.startingPrice && (
-                    <div className="pt-2">
-                      <span className="text-[11px] font-manrope font-semibold uppercase tracking-widest text-[#A09895] block">
-                        Investment
-                      </span>
-                      <span className="font-instrument text-2xl sm:text-3xl text-[#E0A0B0]">
-                        {srv.startingPrice}
-                      </span>
-                    </div>
-                  )}
                 </div>
 
                 <div className="lg:col-span-7 space-y-6 lg:border-l lg:border-[#E2DDD7] lg:pl-10">

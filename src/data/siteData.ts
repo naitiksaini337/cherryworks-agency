@@ -25,7 +25,6 @@ export const SERVICES_LIST: ServiceDetail[] = [
     heroSupporting:
       'Custom business websites designed around your brand, your customers, and your conversion goals. Built with high performance, semantic architecture, and seamless integrations.',
     route: 'services/web-development',
-    startingPrice: '₹12,000',
     features: [
       'Fully functional bespoke web architecture',
       'Proper technical & semantic SEO foundation',
@@ -38,11 +37,11 @@ export const SERVICES_LIST: ServiceDetail[] = [
     packages: [
       {
         name: 'Basic',
-        price: '₹12,000',
+        price: 'Tailored',
         billingPeriod: 'One-time build',
-        tagline: 'Establish your presence. Note: Missing advanced SEO, fast speeds, and automated lead capture needed for serious ROI.',
+        tagline: 'Establish your essential digital presence with high-performance responsive engineering.',
         deliverables: [
-          '1-3 pages (Template-based design) & Mobile responsive',
+          '1-3 pages (Bespoke design) & Mobile responsive',
           'Basic SEO (meta tags, keywords, sitemap)',
           'Standard Contact form + Email routing',
           'Business hours, location & Google My Business setup',
@@ -52,10 +51,10 @@ export const SERVICES_LIST: ServiceDetail[] = [
       },
       {
         name: 'Starter',
-        price: '₹25,000',
+        price: 'Tailored',
         billingPeriod: 'One-time build',
         isPopular: true,
-        tagline: 'The Perfect Starting Point. Skip the basics and build a proper foundation. For just ₹13k more, unlock advanced SEO, automated lead capture, and a fast, premium design that actually converts.',
+        tagline: 'The Perfect Starting Point. Unlock advanced SEO, automated lead capture, and a fast, premium design that converts.',
         deliverables: [
           '5-6 Pages with Premium Mobile Optimization',
           'Advanced SEO Foundation, Content Strategy & Free Audit',
@@ -68,9 +67,9 @@ export const SERVICES_LIST: ServiceDetail[] = [
       },
       {
         name: 'Premium',
-        price: '₹47,000',
+        price: 'Tailored',
         billingPeriod: 'One-time build',
-        tagline: 'The Revenue Engine. Get 3x the firepower for 2.3x the investment. Stand out with bespoke animations, AI features, and a built-in CRM.',
+        tagline: 'The Revenue Engine. Stand out with bespoke animations, AI features, and a built-in CRM.',
         deliverables: [
           '12-15 pages with bespoke custom branding (React/Next.js)',
           'Custom animations, interactive elements & Video integration',
@@ -100,7 +99,7 @@ export const SERVICES_LIST: ServiceDetail[] = [
       },
     ],
     maintenanceNote:
-      'Optional monthly maintenance available from ₹4,000–₹8,000/month (includes website maintenance, content updates, basic SEO updates, bug fixes, and integration monitoring).',
+      'Optional monthly maintenance available (includes website maintenance, content updates, basic SEO updates, bug fixes, and integration monitoring).',
     whatsappMessage: "Hi Cherryworks, I'm interested in Custom Web Development.",
     imgSrc: '/images/animated/web.jpeg',
     videoSrc: 'https://res.cloudinary.com/w5vliur5/video/upload/f_auto,q_auto/12.mp4',
@@ -115,7 +114,6 @@ export const SERVICES_LIST: ServiceDetail[] = [
     heroSupporting:
       'AI-assisted social media management for creators, personal brands, and growing businesses looking to dominate feeds with intent and automated lead capture.',
     route: 'services/social-media',
-    startingPrice: '₹5,000',
     features: [
       'DM automation for instant lead qualification',
       'Curated account management & aesthetic styling',
@@ -127,7 +125,7 @@ export const SERVICES_LIST: ServiceDetail[] = [
     packages: [
       {
         name: 'Starter',
-        price: '₹5,000',
+        price: 'Tailored',
         billingPeriod: 'One-time setup / Starter',
         tagline: 'Ideal for initial launch and direct lead capture setup',
         deliverables: [
@@ -139,7 +137,7 @@ export const SERVICES_LIST: ServiceDetail[] = [
       },
       {
         name: 'Basic',
-        price: '₹18,000',
+        price: 'Tailored',
         billingPeriod: '/month',
         isPopular: true,
         tagline: 'Consistent visibility and dedicated monthly management',
@@ -153,7 +151,7 @@ export const SERVICES_LIST: ServiceDetail[] = [
       },
       {
         name: 'Advanced',
-        price: '₹32,000',
+        price: 'Tailored',
         billingPeriod: '/month',
         tagline: 'Maximum growth velocity and content production',
         deliverables: [
@@ -194,7 +192,6 @@ export const SERVICES_LIST: ServiceDetail[] = [
     heroSupporting:
       'Build a stronger brand while improving how customers find you through traditional search engines and next-generation AI/LLM discovery engines.',
     route: 'services/branding-seo',
-    startingPrice: '₹5,000/month',
     features: [
       'Comprehensive on-page technical SEO',
       'Google Business Profile curation & local dominance',
@@ -206,7 +203,7 @@ export const SERVICES_LIST: ServiceDetail[] = [
     packages: [
       {
         name: 'Basic',
-        price: '₹18,000',
+        price: 'Tailored',
         billingPeriod: '/month',
         tagline: 'Entry-level visibility with basic AI content.',
         deliverables: [
@@ -217,7 +214,7 @@ export const SERVICES_LIST: ServiceDetail[] = [
       },
       {
         name: 'Starter',
-        price: '₹35,000',
+        price: 'Tailored',
         billingPeriod: '/month',
         isPopular: true,
         tagline: 'Comprehensive SEO foundation for growing brands.',
@@ -233,7 +230,7 @@ export const SERVICES_LIST: ServiceDetail[] = [
       },
       {
         name: 'Advanced',
-        price: '₹47,000',
+        price: 'Tailored',
         billingPeriod: '/month',
         tagline: 'Aggressive SEO strategy with premium outreach.',
         deliverables: [
@@ -263,7 +260,6 @@ export const SERVICES_LIST: ServiceDetail[] = [
     heroSupporting:
       'Premium Shopify storefronts designed around product presentation, seamless checkout experience, essential app integrations, and higher average order value.',
     route: 'services/ecommerce',
-    startingPrice: '₹15,000',
     features: [
       'Bespoke Liquid-based custom Shopify architecture',
       'Flawless payment gateway, shipping, and pixel integrations',
@@ -275,9 +271,9 @@ export const SERVICES_LIST: ServiceDetail[] = [
     packages: [
       {
         name: 'LaunchPad',
-        price: '₹15,000',
+        price: 'Tailored',
         billingPeriod: 'One-time build',
-        tagline: 'Perfect for testing products. Get online fast, but missing critical email recovery that often loses ₹3-5k monthly.',
+        tagline: 'Perfect for launching brand storefronts with high-speed checkout and essential conversions.',
         deliverables: [
           '1 product showcase with Custom landing & product pages',
           'Mobile responsive design & Basic Shopify setup',
@@ -290,14 +286,14 @@ export const SERVICES_LIST: ServiceDetail[] = [
       },
       {
         name: 'Growth Hub',
-        price: '₹25,000',
+        price: 'Tailored',
         billingPeriod: 'One-time build',
         isPopular: true,
-        tagline: 'The Sweet Spot. 25x more products, conversion tracking, and email automation to recover lost sales for just ₹10k more.',
+        tagline: 'The Sweet Spot. Product catalog scale, conversion tracking, and email automation to maximize sales.',
         deliverables: [
           'Up to 25 products with advanced mobile optimization',
           'Professional theme customization & Upsell page',
-          'Advanced SEO package + Free SEO audit (₹4k value)',
+          'Advanced SEO package + Free SEO audit (Included bonus)',
           'Email marketing setup (Mailchimp/Klaviyo) & Cart recovery',
           'Payment gateway integration & Order tracking system',
           'Speed optimization & Schema markup for products',
@@ -306,14 +302,14 @@ export const SERVICES_LIST: ServiceDetail[] = [
       },
       {
         name: 'Powerhouse',
-        price: '₹47,000',
+        price: 'Tailored',
         billingPeriod: 'One-time build',
-        tagline: 'Enterprise Grade. 4x more products, AI descriptions, video integration (80% conversion boost) & Loyalty programs.',
+        tagline: 'Enterprise Grade. Large catalog scale, AI descriptions, video integration & Loyalty programs.',
         deliverables: [
           'Up to 100+ products with bespoke Shopify theme design',
           'Full landing page ecosystem & Advanced mobile optimization (PWA)',
           'AI-powered product descriptions & recommendations',
-          'Advanced SEO strategy + Free audit report (₹5k value)',
+          'Advanced SEO strategy + Free audit report (Included bonus)',
           'Email + SMS automation (welcome, abandoned cart, post-purchase)',
           'Free professional copywriting (homepage, emails, products)',
           'Advanced analytics dashboard (funnels, heatmaps) & GA4',
@@ -338,7 +334,7 @@ export const SERVICES_LIST: ServiceDetail[] = [
       },
     ],
     maintenanceNote:
-      'Monthly maintenance packages available from ₹2,000–₹5,000/month. Special pricing available for student side hustles, campus resell operations, and digital product launches—DM us for discount codes.',
+      'Monthly maintenance packages available. Special bundles and discounts available when combining services—chat with us on WhatsApp.',
     whatsappMessage: "Hi Cherryworks, I'm interested in Shopify development.",
     imgSrc: '/images/animated/ecom.jpeg',
     videoSrc: 'https://res.cloudinary.com/w5vliur5/video/upload/f_auto,q_auto/13.mp4',
@@ -518,27 +514,27 @@ export const FAQS: FAQItem[] = [
   {
     question: 'How much does a website cost?',
     answer:
-      'Our custom websites are scoped on a project basis depending on your business goals, required pages, integrations, and complexity. We provide transparent upfront estimates and flexible monthly maintenance options ranging from ₹4,000–₹8,000/month.',
+      'Pricing totally depends upon the project scale, size, required features, and integrations. We provide transparent, milestone-based quotes based on your exact goals, plus special bundle discounts when combining website development with SEO or other services.',
   },
   {
     question: 'Do you offer monthly support and maintenance?',
     answer:
-      'Yes. We provide ongoing monthly maintenance across all our pillars — from website bug fixes, content updates, and SEO monitoring (₹4,000–₹8,000/month) to full Shopify catalog management and optimization (₹2,000–₹5,000/month) and social media management.',
+      'Yes. We provide ongoing monthly maintenance across all our pillars — from website bug fixes, content updates, and SEO monitoring to full Shopify catalog management, optimization, and social media management.',
   },
   {
     question: 'Can you manage our social media end-to-end?',
     answer:
-      'Yes. Our social media packages range from our ₹5,000 Starter setup to our ₹12,000/month Basic and ₹20,000/month Advanced management, including carousels, reels editing, daily stories, content mentorship, and automated direct message (DM) lead qualification.',
+      'Yes. Our social media management covers strategic content creation, curated carousels, reels editing, daily stories, content mentorship, and automated direct message (DM) lead qualification tailored to your brand scale.',
   },
   {
     question: 'Do you work with Shopify?',
     answer:
-      'Yes, Shopify is our core e-commerce platform. We build custom Liquid stores starting from ₹15,000 (Starter), ₹20,000 (Basic with customized videos/images), up to ₹28,000 (Advanced with automated email sequences and lead capture).',
+      'Yes, Shopify is our core e-commerce platform. We build bespoke Liquid stores ranging from focused product launches to full-catalog powerhouse storefronts with automated email sequences and lead capture.',
   },
   {
     question: 'Can you help with SEO and Google Business Profile?',
     answer:
-      'Yes. Our Branding + SEO packages (from ₹5,000/month) cover on-page search engine optimization, Google Business Profile local dominance, brand mentoring, and modern AI/LLM discovery optimization so search engines and AI assistants surface your brand.',
+      'Yes. Our Branding + SEO services cover on-page search engine optimization, Google Business Profile local dominance, brand mentoring, and modern AI/LLM discovery optimization so search engines and AI assistants surface your brand.',
   },
   {
     question: 'Can you automate our lead management?',

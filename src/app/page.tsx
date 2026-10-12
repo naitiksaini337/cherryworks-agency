@@ -10,7 +10,6 @@ import { SectionLabel } from '@/components/ui/SectionLabel';
 import { EditorialHeading } from '@/components/ui/EditorialHeading';
 import { PrimaryButton } from '@/components/ui/Buttons';
 import { Accordion } from '@/components/ui/Accordion';
-import { PricingTabsSection } from '@/components/pricing/PricingTabsSection';
 import { HeroVideoSequence } from '@/components/ui/HeroVideoSequence';
 import WarpShader from '@/components/ui/wrap-shader';
 import { ColorCard } from '@/components/ui/color-change-card';
@@ -117,11 +116,6 @@ export default function HomePage() {
                       <h3 className="font-instrument text-2xl sm:text-4xl md:text-5xl text-[#050505] group-hover:text-[#FFFFFF] transition-colors">
                         {srv.title}
                       </h3>
-                      {srv.startingPrice && (
-                        <span className="inline-block mt-2 text-[11px] font-manrope font-semibold uppercase tracking-widest text-[#7D7578] group-hover:text-[#EAE4E1]">
-                          Starting from {srv.startingPrice}
-                        </span>
-                      )}
                     </div>
                     <div className="lg:col-span-5">
                       <p className="font-lora text-[15px] sm:text-[17px] text-[#3A3537] leading-relaxed group-hover:text-[#F4F0EC] transition-colors line-clamp-2 sm:line-clamp-none">
@@ -168,10 +162,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. PRICING */}
-      <PricingTabsSection />
-
-      {/* 6. FAQ */}
+      {/* 5. FAQ */}
       <section className="py-24 sm:py-32 px-5 sm:px-8 lg:px-12 bg-[#F4F0EC] text-[#050505] border-y border-[#E2DDD7]">
         <div className="max-w-5xl mx-auto space-y-12">
           <FadeIn className="space-y-3">

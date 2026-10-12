@@ -33,7 +33,6 @@ export const Navbar: React.FC = () => {
     { label: 'Services', route: 'services', isDropdown: true },
     { label: 'Work', route: 'work' },
     { label: 'About', route: 'about' },
-    { label: 'Pricing', route: 'pricing' },
     { label: 'Contact', route: 'contact' },
   ];
 
@@ -225,13 +224,6 @@ export const Navbar: React.FC = () => {
                 className="text-left font-instrument text-3xl text-[#FFFFFF] hover:text-[#E0A0B0]"
               >
                 About Studio
-              </Link>
-              <Link
-                href="/pricing"
-                onClick={handleNavClick}
-                className="text-left font-instrument text-3xl text-[#FFFFFF] hover:text-[#E0A0B0]"
-              >
-                Pricing & Packages
               </Link>
               <Link
                 href="/contact"
