@@ -16,6 +16,7 @@ import { ColorCard } from '@/components/ui/color-change-card';
 import { HoverVideo } from '@/components/ui/HoverVideo';
 import { ArrowUpRight, MessageCircle } from 'lucide-react';
 import { FadeIn, SlideUp, StaggerContainer, StaggerItem } from '@/components/animations/MotionWrappers';
+import { SelectedWorkShowcase } from '@/components/portfolio/SelectedWorkShowcase';
 
 export const metadata: Metadata = {
   title: 'Cherryworks | Strategic Design & Automated Conversion Systems',
@@ -134,6 +135,9 @@ export default function HomePage() {
           </StaggerContainer>
         </div>
       </section>
+
+      {/* Flagship Interactive Project Showcase */}
+      <SelectedWorkShowcase />
 
       {/* 4. OUTCOMES / SOCIAL PROOF (Why Cherryworks) */}
       <section className="py-24 sm:py-32 px-5 sm:px-8 lg:px-12 bg-[#0A0507] text-[#FFFFFF] relative overflow-hidden">

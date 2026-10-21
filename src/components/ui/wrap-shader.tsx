@@ -7,6 +7,15 @@ interface WarpShaderProps {
   className?: string;
   colors?: string[];
   speed?: number;
+  proportion?: number;
+  softness?: number;
+  distortion?: number;
+  swirl?: number;
+  swirlIterations?: number;
+  shape?: any;
+  shapeScale?: number;
+  scale?: number;
+  rotation?: number;
 }
 
 export default function WarpShader({
@@ -18,23 +27,34 @@ export default function WarpShader({
     "hsl(348, 45%, 86%)", // Soft Cherry Blossom Blush
   ],
   speed = 0.8,
+  proportion = 0.45,
+  softness = 1,
+  distortion = 0.25,
+  swirl = 0.8,
+  swirlIterations = 10,
+  shape = "checks",
+  shapeScale = 0.1,
+  scale = 1,
+  rotation = 0,
 }: WarpShaderProps) {
   return (
     <div className={`absolute inset-0 w-full h-full pointer-events-none overflow-hidden ${className}`}>
       <Warp
         style={{ height: "100%", width: "100%" }}
-        proportion={0.45}
-        softness={1}
-        distortion={0.25}
-        swirl={0.8}
-        swirlIterations={10}
-        shape="checks"
-        shapeScale={0.1}
-        scale={1}
-        rotation={0}
+        proportion={proportion}
+        softness={softness}
+        distortion={distortion}
+        swirl={swirl}
+        swirlIterations={swirlIterations}
+        shape={shape}
+        shapeScale={shapeScale}
+        scale={scale}
+        rotation={rotation}
         speed={speed}
         colors={colors}
       />
     </div>
   );
 }
+
+export { WarpShader };

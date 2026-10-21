@@ -1,7 +1,7 @@
 import { BackgroundVideo } from '@/components/ui/BackgroundVideo';
 import React from 'react';
 import { SlideUp } from '@/components/animations/MotionWrappers';
-import { WorkPortfolio } from '@/components/portfolio/WorkPortfolio';
+import { SelectedWorkShowcase } from '@/components/portfolio/SelectedWorkShowcase';
 import { SectionLabel } from '@/components/ui/SectionLabel';
 import type { Metadata } from 'next';
 
@@ -21,7 +21,6 @@ export default function WorkPage() {
       <section className="relative min-h-[85vh] sm:min-h-screen w-full overflow-hidden flex items-end sm:items-center bg-[#050505] border-b border-[#1C1417]">
         <BackgroundVideo
           src="https://res.cloudinary.com/w5vliur5/video/upload/f_auto,q_auto/7.mp4"
-          
           loop
           muted
           playsInline
@@ -31,26 +30,26 @@ export default function WorkPage() {
         
         <div className="relative z-20 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-20 sm:py-32 h-full flex flex-col justify-end sm:justify-center">
           <div className="max-w-4xl space-y-6">
-          <SlideUp>
-            <SectionLabel label="SELECTED WORK" dotColor="sakura" />
-          </SlideUp>
-          <SlideUp delay={0.1}>
-            <h1 className="font-instrument text-5xl sm:text-7xl md:text-8xl text-[#FFFFFF] tracking-tight leading-[0.95]">
-              Digital experiences built to <br />
-              <span className="italic text-[#E0A0B0] font-light">move businesses forward.</span>
-            </h1>
-          </SlideUp>
-          <SlideUp delay={0.2}>
-            <p className="font-manrope font-medium text-base sm:text-xl text-[#F4F0EC] leading-relaxed max-w-2xl drop-shadow-md">
-              A growing collection of websites, e-commerce experiences, and digital systems created by
-              CherryScaling Studios.
-            </p>
-          </SlideUp>
+            <SlideUp>
+              <SectionLabel label="SELECTED WORK" dotColor="sakura" />
+            </SlideUp>
+            <SlideUp delay={0.1}>
+              <h1 className="font-instrument text-5xl sm:text-7xl md:text-8xl text-[#FFFFFF] tracking-tight leading-[0.95]">
+                Digital experiences built to <br />
+                <span className="italic text-[#E0A0B0] font-light">move businesses forward.</span>
+              </h1>
+            </SlideUp>
+            <SlideUp delay={0.2}>
+              <p className="font-manrope font-medium text-base sm:text-xl text-[#F4F0EC] leading-relaxed max-w-2xl drop-shadow-md">
+                A curated showcase of high-impact web architecture, conversion-first storefronts, and bespoke digital platforms created by Cherryworks.
+              </p>
+            </SlideUp>
           </div>
         </div>
       </section>
 
-      <WorkPortfolio />
+      {/* Flagship Interactive Filmstrip Showcase with 17 Projects */}
+      <SelectedWorkShowcase />
     </div>
   );
 }
