@@ -11,18 +11,22 @@ export default function PortfolioView() {
   const [selectedCarouselIndex, setSelectedCarouselIndex] = useState(0);
 
   // Map exactly 17 curated flagship projects with hero section imagery
-  const carouselItems: HeroCarouselItem[] = PROJECTS.map((p) => ({
-    id: p.id,
-    title: p.title,
-    image: p.imageUrl,
-    accent: p.accentColor,
-    palette: p.palette,
-    liveUrl: p.liveUrl,
-    niche: p.niche,
-    client: p.client,
-    credit: p.client.toUpperCase(),
-    meta: [p.niche.toUpperCase(), p.location.toUpperCase(), p.clientMetrics.toUpperCase()],
-  }));
+  const carouselItems: HeroCarouselItem[] = React.useMemo(
+    () =>
+      PROJECTS.map((p) => ({
+        id: p.id,
+        title: p.title,
+        image: p.imageUrl,
+        accent: p.accentColor,
+        palette: p.palette,
+        liveUrl: p.liveUrl,
+        niche: p.niche,
+        client: p.client,
+        credit: p.client.toUpperCase(),
+        meta: [p.niche.toUpperCase(), p.location.toUpperCase(), p.clientMetrics.toUpperCase()],
+      })),
+    []
+  );
 
   return (
     <main className="min-h-screen bg-black text-[#F5F5F7] flex flex-col selection:bg-[#7A0F2E] selection:text-white">

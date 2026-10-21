@@ -7,13 +7,12 @@
 // Changing focus re-grades the ambient background to that website's palette.
 import * as React from "react";
 import {
-  AnimatePresence,
   animate,
   motion,
   useMotionValue,
   useReducedMotion,
 } from "framer-motion";
-import { ArrowUpRight, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
+import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 import ProjectWebsitePreview from "@/components/ui/ProjectWebsitePreview";
 import { WarpShader } from "@/components/ui/wrap-shader";
@@ -100,15 +99,22 @@ export function HeroCarousel({
   const reduced = useReducedMotion();
 
   const last = items.length - 1;
-  const index = clamp(controlled ?? uncontrolled, 0, Math.max(0, last));
+  const index = clamp(controlled !== undefined ? controlled : uncontrolled, 0, Math.max(0, last));
+
+  // Synchronize internal state whenever controlled index changes
+  React.useEffect(() => {
+    if (controlled !== undefined) {
+      setUncontrolled(controlled);
+    }
+  }, [controlled]);
 
   const go = React.useCallback(
     (next: number) => {
       const clamped = clamp(next, 0, Math.max(0, last));
-      if (controlled === undefined) setUncontrolled(clamped);
+      setUncontrolled(clamped);
       if (clamped !== index) onIndexChange?.(clamped);
     },
-    [controlled, index, last, onIndexChange]
+    [index, last, onIndexChange]
   );
 
   React.useEffect(() => {
@@ -295,22 +301,19 @@ export function HeroCarousel({
         }}
       >
         <div className="flex w-full items-center justify-center text-center">
-          <AnimatePresence mode="wait">
-            <motion.h2
-              key={index}
-              className="font-bold leading-[1.05] tracking-[-0.02em] text-[#F5F5F7] drop-shadow-[0_4px_24px_rgba(0,0,0,0.8)] text-center max-w-4xl mx-auto"
-              style={{
-                fontFamily: "var(--font-merriweather), Georgia, serif",
-                fontSize: Math.max(26, Math.round(box.h * TITLE)),
-              }}
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -12 }}
-              transition={{ duration: 0.32, ease: "easeOut" }}
-            >
-              {active.title.replace(/\n/g, " ")}
-            </motion.h2>
-          </AnimatePresence>
+          <motion.h2
+            key={`hero-title-${active.id ?? index}-${active.title}`}
+            className="font-bold leading-[1.05] tracking-[-0.02em] text-[#F5F5F7] drop-shadow-[0_4px_24px_rgba(0,0,0,0.8)] text-center max-w-4xl mx-auto pointer-events-none"
+            style={{
+              fontFamily: "var(--font-merriweather), Georgia, serif",
+              fontSize: Math.max(26, Math.round(box.h * TITLE)),
+            }}
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.22, ease: "easeOut" }}
+          >
+            {active.title.replace(/\n/g, " ")}
+          </motion.h2>
         </div>
       </div>
 
@@ -379,6 +382,7 @@ export function HeroCarousel({
               >
                 {/* Tailored Vector & CSS Browser Window Mockup */}
                 <ProjectWebsitePreview
+                  key={`preview-${item.id ?? i}`}
                   id={item.id}
                   title={item.title}
                   image={item.image}

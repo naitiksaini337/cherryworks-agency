@@ -16,18 +16,22 @@ export function SelectedWorkShowcase({
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   // Map exactly 17 curated flagship projects with hero section imagery & jewel-tone palettes
-  const carouselItems: HeroCarouselItem[] = PROJECTS.map((p) => ({
-    id: p.id,
-    title: p.title,
-    image: p.imageUrl,
-    accent: p.accentColor,
-    palette: p.palette,
-    liveUrl: p.liveUrl,
-    niche: p.niche,
-    client: p.client,
-    credit: p.client.toUpperCase(),
-    meta: [p.niche.toUpperCase(), p.location.toUpperCase(), p.clientMetrics.toUpperCase()],
-  }));
+  const carouselItems: HeroCarouselItem[] = React.useMemo(
+    () =>
+      PROJECTS.map((p) => ({
+        id: p.id,
+        title: p.title,
+        image: p.imageUrl,
+        accent: p.accentColor,
+        palette: p.palette,
+        liveUrl: p.liveUrl,
+        niche: p.niche,
+        client: p.client,
+        credit: p.client.toUpperCase(),
+        meta: [p.niche.toUpperCase(), p.location.toUpperCase(), p.clientMetrics.toUpperCase()],
+      })),
+    []
+  );
 
   return (
     <section

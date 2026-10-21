@@ -27,6 +27,12 @@ export function ProjectWebsitePreview({
 }: ProjectWebsitePreviewProps) {
   const [imageError, setImageError] = React.useState(false);
   const [imageLoaded, setImageLoaded] = React.useState(false);
+
+  React.useEffect(() => {
+    setImageError(false);
+    setImageLoaded(false);
+  }, [image, id]);
+
   let hostname = "cherryworks.agency";
   try {
     hostname = new URL(liveUrl).hostname.replace(/^www\./, "");
@@ -229,7 +235,7 @@ export function ProjectWebsitePreview({
                 className="text-xs sm:text-[13px] font-semibold text-white tracking-tight truncate drop-shadow-sm"
                 style={{ fontFamily: "var(--font-merriweather), Georgia, serif" }}
               >
-                {client || title.split("\n")[0]}
+                {title ? title.split("\n")[0] : client}
               </span>
             </div>
 
@@ -295,7 +301,7 @@ export function ProjectWebsitePreview({
                 className="text-xs font-semibold text-white/90 tracking-tight truncate w-full"
                 style={{ fontFamily: "var(--font-merriweather), Georgia, serif" }}
               >
-                {client || title.split("\n")[0]}
+                {title ? title.split("\n")[0] : client}
               </span>
             </div>
           </div>
