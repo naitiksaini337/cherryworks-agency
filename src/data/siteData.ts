@@ -30,7 +30,7 @@ export const SERVICES_LIST: ServiceDetail[] = [
       'Proper technical & semantic SEO foundation',
       'Branding and visual consistency across all breakpoints',
       'Google integrations (Analytics, Search Console, Tag Manager)',
-      'Direct WhatsApp conversion routing & chat triggers',
+      'Direct customer intake routing & CRM triggers',
       'Custom Excel / Google Sheets client-data workflow',
       'Automated booking and lead capture setup',
     ],
@@ -109,10 +109,10 @@ export const SERVICES_LIST: ServiceDetail[] = [
     number: '02',
     title: 'Social Media Management',
     shortDescription:
-      'AI-assisted content, management, and automation designed to help your brand stay visible and consistent.',
+      'Strategic content production, profile direction, and inquiry routing to build lasting brand authority.',
     heroHeadline: 'Turn your social presence into a growth system.',
     heroSupporting:
-      'AI-assisted social media management for creators, personal brands, and growing businesses looking to dominate feeds with intent and automated lead capture.',
+      'Curated social storytelling for founders and growing brands looking to build cultural authority and capture high-intent inquiries.',
     route: 'services/social-media',
     features: [
       'DM automation for instant lead qualification',
@@ -334,7 +334,7 @@ export const SERVICES_LIST: ServiceDetail[] = [
       },
     ],
     maintenanceNote:
-      'Monthly maintenance packages available. Special bundles and discounts available when combining services—chat with us on WhatsApp.',
+      'Monthly maintenance packages available. Special bundles and package discounts available when combining services.',
     whatsappMessage: "Hi Cherryworks, I'm interested in Shopify development.",
     imgSrc: '/images/animated/ecom.jpeg',
     videoSrc: 'https://res.cloudinary.com/w5vliur5/video/upload/f_auto,q_auto/13.mp4',
@@ -344,30 +344,30 @@ export const SERVICES_LIST: ServiceDetail[] = [
 export const WHY_CHERRYWORKS = [
   {
     number: '01',
-    title: 'AI-Assisted Workflows',
+    title: 'Bespoke Engineering',
     description:
-      'We use artificial intelligence where it genuinely improves speed, consistency, research, content generation, and execution precision — without sacrificing human taste.',
+      'Clean, modern architecture designed for rapid load times, organic search authority, and long-term structural reliability.',
     imgSrc: '/images/animated/ai_workflows_cherry_1788300621903.jpg',
   },
   {
     number: '02',
-    title: 'Built for Conversion',
+    title: 'Commercial Intent',
     description:
-      'Every website, campaign, and digital experience is architected with a direct business purpose: turning curious visitors into inquiries, leads, and paying customers.',
+      'Every layout, typographic choice, and interaction pathway is designed to turn attention into customer inquiries.',
     imgSrc: '/images/animated/conversion_cherry_1788300631408.jpg',
   },
   {
     number: '03',
-    title: 'Automation-First',
+    title: 'Streamlined Systems',
     description:
-      'We connect lead capture, customer communication, appointment booking, spreadsheets, and follow-up sequences wherever automation saves you hours and closes deals faster.',
+      'Automated client intakes, booking flows, and data routing running quietly in the background without operational friction.',
     imgSrc: '/images/animated/automation_cherry_1788300643563.jpg',
   },
   {
     number: '04',
-    title: 'Brand + Performance',
+    title: 'Editorial Authority',
     description:
-      'Beautiful editorial design is only valuable when it produces measurable business outcomes. We fuse high aesthetic standards with rigorous commercial execution.',
+      'Elevated visual standards fused with commercial discipline. Design that builds enduring brand trust and eliminates price resistance.',
     imgSrc: '/images/animated/brand_performance_cherry_1788300654055.jpg',
   },
 ];
@@ -497,14 +497,65 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     imagePlaceholderColor: '#1A1A1A',
     accentGradient: 'from-[#2C2C2C] via-[#151515] to-[#050505]',
     techStack: ['Illustrator', 'Figma', 'Typography'],
-  }
+  },
+  {
+    id: 'ace-athletics',
+    name: 'ACE Athletics',
+    category: 'Websites',
+    tag: 'Athletic Training Platform',
+    shortDescription: 'Division-1 standard athletic training center website with interactive facility exploration and membership intake.',
+    fullOverview: 'Engineered a high-performance digital presence for ACE Athletics spanning flagship performance centers across Los Angeles, Santa Monica, and Newport Beach.',
+    servicesProvided: ['Digital Architecture', 'Performance UX', 'Responsive Web Design', 'Asset Optimization'],
+    platform: 'Next.js & Vercel',
+    timeline: 'Live Production',
+    liveUrl: 'https://ace-athletics-website.vercel.app/',
+    highlights: ['6 premier athletic disciplines', 'Interactive flagship campus guides', 'High-conversion intake funnel'],
+    imageUrl: '/heroimgs/aceathletics.png',
+    imagePlaceholderColor: '#1A0A0E',
+    accentGradient: 'from-[#E11D48] via-[#4C0519] to-[#050505]',
+    techStack: ['Next.js', 'Tailwind', 'Vercel'],
+  },
+  {
+    id: 'peonie-lab',
+    name: 'Peonie Lab',
+    category: 'E-com',
+    tag: 'Botanical Skincare',
+    shortDescription: 'Small-batch luxury botanical skincare storefront with editorial aesthetic and crystal jar product presentation.',
+    fullOverview: 'Crafted an editorial skincare shopping experience for Peonie Lab celebrating small-batch botanical formulations, tactile glass packaging, and effortless checkout.',
+    servicesProvided: ['E-Commerce UX', 'Editorial Design', 'Brand Storytelling', 'Product Presentation'],
+    platform: 'Next.js & Vercel',
+    timeline: 'Live Production',
+    liveUrl: 'https://peonie-lab.vercel.app/',
+    highlights: ['Editorial botanical typography & layout', 'Micro-interactions and fluid motion', 'Seamless mobile conversion'],
+    imageUrl: '/heroimgs/peonielab.png',
+    imagePlaceholderColor: '#1A1215',
+    accentGradient: 'from-[#E0A0B0] via-[#5C1A2B] to-[#050505]',
+    techStack: ['Next.js', 'React', 'Tailwind'],
+  },
+  {
+    id: 'vernis-lacquer',
+    name: 'VERNIS',
+    category: 'E-com',
+    tag: 'High-Gloss Nail Lacquer',
+    shortDescription: 'Single-coat, chip-resistant luxury nail lacquer e-commerce platform with shade selector and mirror-glass finish.',
+    fullOverview: 'Developed an ultra-minimalist, high-gloss storefront for VERNIS featuring signature shades, shade application rituals, and swift mobile ordering.',
+    servicesProvided: ['Storefront Development', 'Color Shade Selector', 'High-Resolution Visuals', 'Conversion Tuning'],
+    platform: 'Next.js & Vercel',
+    timeline: 'Live Production',
+    liveUrl: 'https://vernis-smoky.vercel.app/',
+    highlights: ['Interactive 6-shade preview system', 'Minimalist Parisian editorial feel', 'Ultra-fast page response'],
+    imageUrl: '/heroimgs/vernis.png',
+    imagePlaceholderColor: '#16080B',
+    accentGradient: 'from-[#9F1239] via-[#4C0519] to-[#050505]',
+    techStack: ['Next.js', 'React', 'Tailwind'],
+  },
 ];
 
 export const FAQS: FAQItem[] = [
   {
     question: 'What does Cherryworks do?',
     answer:
-      'Cherryworks Studios is a digital growth studio. We help ambitious brands grow through custom websites, AI-assisted social media management, strategic branding, SEO & AI-discovery optimization, and high-converting Shopify e-commerce stores.',
+      'Cherryworks Studios is a digital growth studio. We build bespoke websites, high-converting Shopify storefronts, editorial brand identities, and organic search foundations.',
   },
   {
     question: 'Who do you work with?',
@@ -539,7 +590,7 @@ export const FAQS: FAQItem[] = [
   {
     question: 'Can you automate our lead management?',
     answer:
-      'Absolutely. We integrate DM automations, instant WhatsApp routing, appointment booking systems, and automated data syncing into Google Sheets or your CRM to turn raw traffic into organized, actionable leads without manual data entry.',
+      'Absolutely. We integrate inquiry automations, appointment booking, and automated CRM data syncing to turn raw traffic into organized, actionable client pipelines.',
   },
   {
     question: 'Do you work with clients outside India?',
@@ -549,40 +600,40 @@ export const FAQS: FAQItem[] = [
   {
     question: 'How do we get started?',
     answer:
-      'You can submit a project inquiry through our Contact page or click "Chat on WhatsApp" anywhere on the site. We will discuss your goals, recommend the right system, and deliver a clear timeline and proposal.',
+      'Submit an inquiry through our brief form. We will review your goals, recommend the right digital architecture, and deliver a clear proposal within 24 hours.',
   },
 ];
 
 export const ABOUT_BELIEFS = [
   {
     number: '01',
-    title: 'Design should create clarity.',
+    title: 'Design creates clarity.',
     description:
-      'Aesthetics without clarity is decoration. Every layout, headline, and contrast decision must instantly communicate who you are and why a client should trust you.',
+      'Aesthetics without intent is decoration. Every layout, headline, and contrast decision must clearly communicate value and command trust.',
   },
   {
     number: '02',
-    title: 'Technology should remove friction.',
+    title: 'Technology removes friction.',
     description:
-      'From load speed to single-click WhatsApp inquiries and frictionless checkouts, digital infrastructure should never make a customer work to buy from you.',
+      'From sub-second loads to frictionless checkouts, modern architecture should never stand between your customer and your product.',
   },
   {
     number: '03',
-    title: 'Automation should save time.',
+    title: 'Systems protect focus.',
     description:
-      'Repetitive lead qualification, inquiry logging, and customer confirmations should run smoothly in the background so you can focus on building your craft.',
+      'Reliable data workflows and customer routing run quietly in the background, freeing founders to focus purely on high-leverage craft.',
   },
   {
     number: '04',
-    title: 'Marketing should support business outcomes.',
+    title: 'Performance drives authority.',
     description:
-      'Vanity metrics mean nothing without conversion. Every piece of content, SEO keyword, and design asset must tie directly to commercial growth.',
+      'Vanity metrics fade. We measure design success by organic search visibility, customer retention, and clear commercial conversion.',
   },
   {
     number: '05',
-    title: 'Every digital asset should have a purpose.',
+    title: 'Zero bloat philosophy.',
     description:
-      'We reject unnecessary bloat. If an element does not build trust, clarify value, or drive action, it has no place in your digital system.',
+      'If an element does not clarify value, build confidence, or accelerate customer action, it has no place in your digital ecosystem.',
   },
 ];
 

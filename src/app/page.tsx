@@ -4,17 +4,15 @@ import { Metadata } from 'next';
 import {
   SERVICES_LIST,
   FAQS,
-  getWhatsAppUrl,
 } from '@/data/siteData';
 import { SectionLabel } from '@/components/ui/SectionLabel';
 import { EditorialHeading } from '@/components/ui/EditorialHeading';
 import { PrimaryButton } from '@/components/ui/Buttons';
 import { Accordion } from '@/components/ui/Accordion';
 import { HeroVideoSequence } from '@/components/ui/HeroVideoSequence';
-import WarpShader from '@/components/ui/wrap-shader';
 import { ColorCard } from '@/components/ui/color-change-card';
 import { HoverVideo } from '@/components/ui/HoverVideo';
-import { ArrowUpRight, MessageCircle } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { FadeIn, SlideUp, StaggerContainer, StaggerItem } from '@/components/animations/MotionWrappers';
 import { SelectedWorkShowcase } from '@/components/portfolio/SelectedWorkShowcase';
 
@@ -44,23 +42,23 @@ export default function HomePage() {
           </EditorialHeading>
         </SlideUp>
 
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <StaggerItem className="space-y-4">
-            <h3 className="font-instrument text-2xl text-[#FFFFFF]">Invisible Brands</h3>
-            <p className="font-lora text-[#A09895] leading-relaxed">
-              Most businesses have websites that act as digital brochures—sitting quietly, waiting for traffic that never converts. Attention is wasted on generic aesthetics without a commercial engine.
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12">
+          <StaggerItem className="space-y-3">
+            <h3 className="font-instrument text-2xl text-[#FFFFFF]">Passive Storefronts</h3>
+            <p className="font-lora text-[#A09895] text-[15px] leading-relaxed">
+              Websites that function as quiet brochures—pleasing surfaces without commercial intent or clear conversion pathways.
             </p>
           </StaggerItem>
-          <StaggerItem className="space-y-4">
-            <h3 className="font-instrument text-2xl text-[#FFFFFF]">Leaky Funnels</h3>
-            <p className="font-lora text-[#A09895] leading-relaxed">
-              Traffic alone doesn't pay the bills. If your digital touchpoints aren't engineered to capture, nurture, and convert visitors automatically, you are actively losing revenue.
+          <StaggerItem className="space-y-3">
+            <h3 className="font-instrument text-2xl text-[#FFFFFF]">Lost Attention</h3>
+            <p className="font-lora text-[#A09895] text-[15px] leading-relaxed">
+              Visitors arrive, browse briefly, and vanish. Without deliberate conversion design, marketing spend yields zero compounding return.
             </p>
           </StaggerItem>
-          <StaggerItem className="space-y-4">
-            <h3 className="font-instrument text-2xl text-[#FFFFFF]">Fragmented Systems</h3>
-            <p className="font-lora text-[#A09895] leading-relaxed">
-              Juggling multiple tools, disjointed branding, and manual follow-ups creates friction. A fragmented system confuses customers and exhausts your team.
+          <StaggerItem className="space-y-3">
+            <h3 className="font-instrument text-2xl text-[#FFFFFF]">Fragmented Craft</h3>
+            <p className="font-lora text-[#A09895] text-[15px] leading-relaxed">
+              Disconnected tools, sluggish templates, and inconsistent aesthetics that slowly erode customer confidence and brand value.
             </p>
           </StaggerItem>
         </StaggerContainer>
@@ -76,7 +74,7 @@ export default function HomePage() {
                 Everything your brand needs to grow online.
               </EditorialHeading>
               <p className="font-lora text-[16px] sm:text-[18px] text-[#3A3537] leading-relaxed max-w-2xl pt-2">
-                We combine editorial design with automated conversion architecture. It's not just about looking premium; it's about building a digital ecosystem that actively generates business.
+                Editorial visual standards paired with high-performance web engineering. Systems crafted to turn attention into customer revenue.
               </p>
             </SlideUp>
             <Link
@@ -145,22 +143,19 @@ export default function HomePage() {
         <div className="absolute bottom-0 left-10 w-96 h-96 bg-[#7A0F2E]/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto space-y-16 relative z-10">
-          <SlideUp className="space-y-3 max-w-3xl">
-            <SectionLabel label="OUTCOMES" dotColor="sakura" />
+          <SlideUp className="space-y-4 max-w-3xl">
+            <SectionLabel label="STUDIO PHILOSOPHY" dotColor="sakura" />
             <EditorialHeading size="display" className="text-[#FFFFFF]">
-              A simpler way to build and grow.
+              Architecture without excess.
             </EditorialHeading>
             <p className="font-lora text-[16px] sm:text-[18px] text-[#A09895] leading-relaxed max-w-2xl pt-2">
-              We leverage AI workflows and automation-first engineering to deliver faster, more precise, and highly scalable results.
+              We operate as an agile design and engineering studio. No bloated agency retainers, no layers of middle management. Just refined craft and focused execution.
             </p>
           </SlideUp>
 
-          <SlideUp className="max-w-4xl space-y-8 pt-6">
-            <p className="font-lora text-xl sm:text-2xl text-white/90 leading-relaxed font-light">
-              We reject the bloat of traditional agencies. Instead, we’ve engineered a streamlined studio model that focuses purely on what moves the needle: <strong className="font-medium text-white">elite design, technical excellence, and AI-driven efficiency.</strong>
-            </p>
-            <p className="font-lora text-lg sm:text-xl text-white/70 leading-relaxed">
-              By eliminating unnecessary overhead and focusing strictly on high-leverage deliverables—like bespoke web development, automated SEO, and conversion-first Shopify architecture—we deliver superior digital experiences faster and more cost-effectively. Your brand gets the enterprise-grade infrastructure it needs to scale, without the enterprise-grade friction.
+          <SlideUp className="max-w-3xl pt-2">
+            <p className="font-lora text-lg sm:text-xl text-white/80 leading-relaxed font-light">
+              Every deliverable—from custom Next.js storefronts to organic search foundations—is built to run fast, convert reliably, and reflect high-end brand authority.
             </p>
           </SlideUp>
         </div>
@@ -179,48 +174,31 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 7. FINAL CTA */}
-      <section className="relative py-28 sm:py-36 md:py-44 px-5 sm:px-8 lg:px-12 bg-[#050505] overflow-hidden">
-        <WarpShader
-          colors={[
-            "hsl(340, 85%, 15%)",
-            "hsl(345, 60%, 72%)",
-            "hsl(343, 78%, 28%)",
-            "hsl(348, 50%, 82%)",
-          ]}
-          speed={0.8}
-          className="opacity-70"
+      {/* 7. FINAL CTA - Minimalist */}
+      <section className="relative py-24 sm:py-32 px-5 sm:px-8 lg:px-12 bg-[#050505] border-t border-[#1C1417] text-center overflow-hidden bg-grain">
+        {/* Subtle ambient cherry aura */}
+        <div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-[200px] pointer-events-none -z-0 opacity-40"
+          style={{
+            background:
+              'radial-gradient(ellipse 60% 40% at 50% 50%, rgba(122, 15, 46, 0.2), transparent 70%)',
+          }}
         />
-        <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px] pointer-events-none z-0"></div>
 
-        <FadeIn className="relative z-10 max-w-4xl mx-auto text-center space-y-8">
-          <SectionLabel label="READY TO GROW?" dotColor="sakura" className="justify-center" />
-          
-          <h2 className="font-instrument text-5xl sm:text-7xl md:text-8xl text-white tracking-tight leading-[0.95]">
-            Let's build something <br />
-            <span className="italic text-[#E0A0B0] font-light">worth scaling.</span>
+        <FadeIn className="relative z-10 max-w-3xl mx-auto space-y-8">
+          <h2 className="font-instrument text-4xl sm:text-6xl md:text-7xl text-white font-normal tracking-tight leading-[1.05]">
+            Let&apos;s build something <br className="hidden sm:inline" />
+            <span className="italic font-light text-[#E0A0B0]">worth scaling.</span>
           </h2>
 
-          <p className="font-lora text-[16px] sm:text-[18px] text-white/90 max-w-xl mx-auto leading-relaxed drop-shadow-sm">
-            Tell us where you are, where you want to go, and we'll help build the digital system to get you there.
-          </p>
-
-          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/contact">
-              <PrimaryButton variant="cherry">
-                START A PROJECT →
-              </PrimaryButton>
-            </Link>
-
-            <a
-              href={getWhatsAppUrl("Hi Cherryworks, I'm ready to build a digital growth system for my brand.")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-black/40 backdrop-blur-sm border border-[#E0A0B0]/40 text-[#E0A0B0] hover:bg-[#7A0F2E] hover:text-[#FFFFFF] text-xs font-manrope font-semibold uppercase tracking-widest transition-all rounded-[2px]"
+          <div className="pt-2 flex justify-center">
+            <Link
+              href="/contact"
+              className="group inline-flex items-center gap-2.5 px-8 py-4 bg-[#7A0F2E] hover:bg-[#8F1437] text-white font-manrope text-xs font-bold uppercase tracking-[0.18em] rounded-[2px] transition-all duration-300 shadow-[0_0_24px_rgba(122,15,46,0.35)] hover:shadow-[0_0_36px_rgba(224,160,176,0.25)]"
             >
-              <MessageCircle className="w-4 h-4" />
-              <span>Chat on WhatsApp →</span>
-            </a>
+              <span>Start a Project</span>
+              <ArrowUpRight className="w-4 h-4 text-[#E0A0B0] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </Link>
           </div>
         </FadeIn>
       </section>

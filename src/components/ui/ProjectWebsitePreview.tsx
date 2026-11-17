@@ -174,6 +174,29 @@ export function ProjectWebsitePreview({
             <path d="M10 52c12 2 32 2 44 0" strokeDasharray="3 3" />
           </svg>
         );
+      case "18": // ACE Athletics
+        return (
+          <svg className="w-16 h-16 opacity-90 text-[#E11D48]" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2">
+            <polygon points="32,8 54,54 10,54" />
+            <line x1="32" y1="20" x2="32" y2="44" />
+            <circle cx="32" cy="48" r="1.5" fill="currentColor" />
+          </svg>
+        );
+      case "19": // Peonie Lab Skincare
+        return (
+          <svg className="w-16 h-16 opacity-90 text-[#E0A0B0]" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M32 12c-6 8-12 16-12 24a12 12 0 0 0 24 0c0-8-6-16-12-24z" />
+            <path d="M32 26v16" strokeDasharray="2 2" />
+          </svg>
+        );
+      case "20": // VERNIS High-Gloss Lacquer
+        return (
+          <svg className="w-16 h-16 opacity-90 text-[#9F1239]" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2">
+            <rect x="22" y="24" width="20" height="28" rx="4" />
+            <rect x="27" y="12" width="10" height="12" rx="2" />
+            <line x1="26" y1="36" x2="38" y2="36" strokeOpacity="0.5" />
+          </svg>
+        );
       default:
         return (
           <svg className="w-16 h-16 opacity-85 text-white/80" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2">
@@ -231,10 +254,7 @@ export function ProjectWebsitePreview({
               <span className="text-[9px] uppercase font-mono tracking-widest text-[#A1A1AA] font-semibold truncate">
                 {niche}
               </span>
-              <span
-                className="text-xs sm:text-[13px] font-semibold text-white tracking-tight truncate drop-shadow-sm"
-                style={{ fontFamily: "var(--font-merriweather), Georgia, serif" }}
-              >
+              <span className="text-xs sm:text-[13px] font-medium font-manrope text-white tracking-tight truncate drop-shadow-sm">
                 {title ? title.split("\n")[0] : client}
               </span>
             </div>
@@ -262,16 +282,6 @@ export function ProjectWebsitePreview({
               onError={() => setImageError(true)}
               className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover/card:scale-105 select-none pointer-events-none will-change-transform"
             />
-
-            {/* Subtle bottom gradient & landscape watermark */}
-            <div className="absolute inset-x-0 bottom-0 h-7 bg-gradient-to-t from-black/85 via-black/35 to-transparent pointer-events-none z-10 flex items-end justify-between px-2.5 pb-1">
-              <span className="text-[8px] font-mono tracking-wider text-white/50 uppercase">
-                Landscape View
-              </span>
-              <span className="text-[8px] font-mono text-white/40">
-                16:10
-              </span>
-            </div>
           </div>
         </div>
       ) : (
@@ -297,10 +307,7 @@ export function ProjectWebsitePreview({
               <span className="text-[9px] uppercase font-mono tracking-widest text-[#A1A1AA] font-semibold truncate w-full">
                 {niche}
               </span>
-              <span
-                className="text-xs font-semibold text-white/90 tracking-tight truncate w-full"
-                style={{ fontFamily: "var(--font-merriweather), Georgia, serif" }}
-              >
+              <span className="text-xs font-medium font-manrope text-white/90 tracking-tight truncate w-full">
                 {title ? title.split("\n")[0] : client}
               </span>
             </div>

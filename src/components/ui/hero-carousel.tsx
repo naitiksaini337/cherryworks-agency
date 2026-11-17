@@ -275,16 +275,13 @@ export function HeroCarousel({
             className="w-2.5 h-2.5 rounded-full animate-pulse"
             style={{ backgroundColor: accent, boxShadow: `0 0 12px ${accent}` }}
           />
-          <div className="text-xs font-mono-tech text-white/80 bg-white/5 border border-white/10 px-3 py-1 rounded-full uppercase tracking-wider font-semibold">
-            PROJECT {String(index + 1).padStart(2, "0")} / {String(items.length).padStart(2, "0")}
+          <div className="text-[11px] font-mono text-white/70 bg-white/5 border border-white/10 px-2.5 py-0.5 rounded-full uppercase tracking-wider font-medium">
+            {String(index + 1).padStart(2, "0")} / {String(items.length).padStart(2, "0")}
           </div>
         </div>
 
         {brand ? (
-          <div
-            className="hidden sm:block font-bold tracking-[0.08em] uppercase text-xs sm:text-sm text-[#F5F5F7]/90"
-            style={{ fontFamily: "var(--font-merriweather), Georgia, serif" }}
-          >
+          <div className="hidden sm:block font-manrope font-semibold tracking-[0.2em] uppercase text-[11px] text-[#E0A0B0]">
             {brand}
           </div>
         ) : null}
@@ -303,10 +300,9 @@ export function HeroCarousel({
         <div className="flex w-full items-center justify-center text-center">
           <motion.h2
             key={`hero-title-${active.id ?? index}-${active.title}`}
-            className="font-bold leading-[1.05] tracking-[-0.02em] text-[#F5F5F7] drop-shadow-[0_4px_24px_rgba(0,0,0,0.8)] text-center max-w-4xl mx-auto pointer-events-none"
+            className="font-instrument font-normal leading-[1.05] tracking-tight text-[#F5F5F7] drop-shadow-[0_4px_24px_rgba(0,0,0,0.8)] text-center max-w-4xl mx-auto pointer-events-none"
             style={{
-              fontFamily: "var(--font-merriweather), Georgia, serif",
-              fontSize: Math.max(26, Math.round(box.h * TITLE)),
+              fontSize: Math.max(30, Math.round(box.h * TITLE * 1.15)),
             }}
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
@@ -424,7 +420,7 @@ export function HeroCarousel({
               boxShadow: `0 0 24px ${accent}60, 0 8px 24px rgba(0,0,0,0.6)`,
             }}
           >
-            <span>Visit</span>
+            <span>Live Site</span>
             <ExternalLink className="w-3.5 h-3.5 shrink-0 transition-transform duration-200 group-hover/cta:translate-x-0.5 group-hover/cta:-translate-y-0.5" />
           </a>
         </div>

@@ -48,8 +48,8 @@ export default function WorkPage() {
         </div>
       </section>
 
-      {/* Flagship Interactive Filmstrip Showcase with 17 Projects */}
-      <SelectedWorkShowcase />
+      {/* Flagship Interactive Filmstrip Showcase */}
+      <SelectedWorkShowcase showHeading={false} />
     </div>
   );
 }

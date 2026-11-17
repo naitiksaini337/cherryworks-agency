@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import SakuraEditorialPoster from "@/components/ui/sakura-editorial-poster";
 import HeroCarousel, { type HeroCarouselItem } from "@/components/ui/hero-carousel";
-import { Footer } from "@/components/layout/Footer";
 import Skiper39 from "@/components/ui/skiper39";
 import { PROJECTS } from "@/data/projects";
 
@@ -53,10 +52,7 @@ export default function PortfolioView() {
         </div>
       </section>
 
-      {/* 3. Collaboration, NDA Notice & Connect Footer */}
-      <Footer />
-
-      {/* 4. Bottom-Most Footer: Interactive Walking People Animation */}
+      {/* 3. Bottom Atmospheric Walk Animation */}
       <section className="relative w-full overflow-hidden bg-black border-t border-white/[0.06]">
         <Skiper39 />
       </section>

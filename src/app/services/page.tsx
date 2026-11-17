@@ -5,11 +5,11 @@ import React from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 
-import { SERVICES_LIST, getWhatsAppUrl } from '@/data/siteData';
+import { SERVICES_LIST } from '@/data/siteData';
 import { SectionLabel } from '@/components/ui/SectionLabel';
 import { EditorialHeading } from '@/components/ui/EditorialHeading';
 import { PrimaryButton } from '@/components/ui/Buttons';
-import { ArrowRight, Check, ArrowUpRight, MessageCircle } from 'lucide-react';
+import { ArrowRight, Check, ArrowUpRight } from 'lucide-react';
 import { FadeIn, SlideUp, StaggerContainer, StaggerItem } from '@/components/animations/MotionWrappers';
 
 interface ServicesOverviewPageProps {
@@ -127,16 +127,6 @@ export default function ServicesOverviewPage() {
                     >
                       EXPLORE {srv.title.toUpperCase()} →
                     </PrimaryButton>
-
-                    <a
-                      href={getWhatsAppUrl(srv.whatsappMessage)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-xs font-manrope font-semibold uppercase tracking-wider text-[#E0A0B0] hover:text-[#050505] py-2"
-                    >
-                      <MessageCircle className="w-4 h-4" />
-                      <span>Ask About This on WhatsApp</span>
-                    </a>
                   </div>
                   </div>
                 </div>
@@ -150,16 +140,19 @@ export default function ServicesOverviewPage() {
         <SlideUp className="p-10 sm:p-14 bg-[#0E0B0D] border border-[#221419] rounded-[2px] text-center space-y-6">
           <SectionLabel label="PROJECT SCOPING" dotColor="sakura" className="justify-center" />
           <h3 className="font-instrument text-3xl sm:text-5xl text-[#FFFFFF]">
-            Need a combination of multiple services?
+            Need a combination of services?
           </h3>
-          <p className="font-manrope font-medium text-[15px] text-[#A09895] max-w-xl mx-auto">
-            We regularly architect cross-functional packages uniting web engineering, SEO, and social
-            automation for maximum brand velocity.
+          <p className="font-lora text-[16px] text-[#A09895] max-w-xl mx-auto leading-relaxed">
+            We architect cross-functional bundles uniting bespoke web engineering, brand design, and search foundations.
           </p>
-          <div className="pt-2 flex justify-center gap-4">
-            <PrimaryButton variant="light" onClick={() => handleNav('contact')}>
-              REQUEST CUSTOM PROPOSAL →
-            </PrimaryButton>
+          <div className="pt-2 flex justify-center">
+            <button
+              onClick={() => handleNav('contact')}
+              className="group inline-flex items-center gap-2.5 px-8 py-4 bg-[#7A0F2E] hover:bg-[#8F1437] text-white font-manrope text-xs font-bold uppercase tracking-[0.16em] rounded-[2px] transition-all duration-300 shadow-[0_0_24px_rgba(122,15,46,0.35)]"
+            >
+              <span>Request Custom Proposal</span>
+              <ArrowUpRight className="w-4 h-4 text-[#E0A0B0] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </button>
           </div>
         </SlideUp>
       </div>

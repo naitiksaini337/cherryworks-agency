@@ -6,41 +6,41 @@ const SEQUENCE = [
   {
     id: '01',
     videoUrl: 'https://res.cloudinary.com/w5vliur5/video/upload/f_auto,q_auto/1.mp4',
-    eyebrow: '01 / WEB',
+    eyebrow: '01 / ARCHITECTURE',
     headline: 'Build beautifully.',
     emphasis: 'Grow intelligently.',
-    description: 'High-converting websites built around your brand and business goals.',
-    primaryCta: 'BUILD MY WEBSITE →',
+    description: 'Bespoke storefronts and digital systems engineered for ambitious brands.',
+    primaryCta: 'START A PROJECT ↗',
     primaryLink: '/contact'
   },
   {
     id: '02',
     videoUrl: 'https://res.cloudinary.com/w5vliur5/video/upload/f_auto,q_auto/2.mp4',
-    eyebrow: '02 / GROW',
-    headline: 'Open new doors.',
+    eyebrow: '02 / AUTHORITY',
+    headline: 'Position with intent.',
     emphasis: '',
-    description: 'SEO, social media, and branding designed to put your business in front of more people.',
-    primaryCta: 'GROW MY BRAND →',
-    primaryLink: '/contact'
+    description: 'Technical SEO, editorial branding, and organic search dominance.',
+    primaryCta: 'EXPLORE SERVICES ↗',
+    primaryLink: '/services'
   },
   {
     id: '03',
     videoUrl: 'https://res.cloudinary.com/w5vliur5/video/upload/f_auto,q_auto/3.mp4',
-    eyebrow: '03 / AUTOMATE',
-    headline: 'Work smarter.',
+    eyebrow: '03 / SYSTEMS',
+    headline: 'Precision in detail.',
     emphasis: '',
-    description: 'AI-assisted workflows and automation that save time and keep your business moving.',
-    primaryCta: 'AUTOMATE MY BUSINESS →',
-    primaryLink: '/contact'
+    description: 'Frictionless e-commerce architecture and streamlined conversion flows.',
+    primaryCta: 'VIEW SELECTED WORK ↗',
+    primaryLink: '/work'
   },
   {
     id: '04',
     videoUrl: 'https://res.cloudinary.com/w5vliur5/video/upload/f_auto,q_auto/4.mp4',
     eyebrow: '04 / SCALE',
-    headline: 'Connect beyond boundaries.',
+    headline: 'Scale without noise.',
     emphasis: '',
-    description: 'Build your digital presence, reach new audiences, and turn attention into customers.',
-    primaryCta: 'START GROWING →',
+    description: 'Turn digital attention into compounding, predictable business revenue.',
+    primaryCta: 'START A PROJECT ↗',
     primaryLink: '/contact'
   }
 ];
@@ -151,7 +151,7 @@ export const HeroVideoSequence: React.FC = () => {
             <div>
               <Link
                 href={activeContent.primaryLink}
-                className="inline-flex items-center justify-center px-6 sm:px-7 py-3.5 bg-[#EAE4E1] text-[#050505] hover:bg-[#EAE4E1] text-xs font-manrope font-bold uppercase tracking-widest transition-all rounded-[2px] active:scale-95 shadow-md"
+                className="inline-flex items-center justify-center px-7 py-3.5 bg-white text-[#050505] hover:bg-[#E0A0B0] hover:text-[#050505] text-xs font-manrope font-bold uppercase tracking-[0.16em] transition-all duration-300 rounded-[2px] active:scale-95 shadow-lg"
               >
                 {activeContent.primaryCta}
               </Link>

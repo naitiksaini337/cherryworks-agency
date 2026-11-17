@@ -1,17 +1,15 @@
 import React, { useState } from 'react';
 import { InquiryFormData } from '../../types';
-import { CheckCircle2, MessageCircle, Send } from 'lucide-react';
-import { getWhatsAppUrl } from '../../data/siteData';
+import { CheckCircle2, Send, Mail } from 'lucide-react';
+import { BRAND } from '../../data/siteData';
 import { GOOGLE_APPS_SCRIPT_URL } from '../../config/constants';
 
 interface ProjectInquiryFormProps {
   initialService?: string;
-  initialBudget?: string;
 }
 
 export const ProjectInquiryForm: React.FC<ProjectInquiryFormProps> = ({
   initialService = 'Web Development',
-  initialBudget = '₹25,000–₹50,000',
 }) => {
   const [formData, setFormData] = useState<InquiryFormData>({
     full_name: '',
@@ -20,7 +18,6 @@ export const ProjectInquiryForm: React.FC<ProjectInquiryFormProps> = ({
     phone_whatsapp: '',
     website_instagram: '',
     service_required: initialService,
-    budget_range: initialBudget,
     project_details: '',
     bot_field: '',
   });
@@ -38,14 +35,6 @@ export const ProjectInquiryForm: React.FC<ProjectInquiryFormProps> = ({
     'Not Sure Yet',
   ];
 
-  const budgetOptions = [
-    'Under ₹10,000',
-    '₹10,000–₹25,000',
-    '₹25,000–₹50,000',
-    '₹50,000–₹1,00,000',
-    '₹1,00,000+',
-    'Not Sure',
-  ];
 
   const validate = (): boolean => {
     const newErrors: Partial<Record<keyof InquiryFormData, string>> = {};
@@ -53,11 +42,9 @@ export const ProjectInquiryForm: React.FC<ProjectInquiryFormProps> = ({
     if (!formData.email.trim() || !formData.email.includes('@'))
       newErrors.email = 'Valid email is required';
     if (!formData.phone_whatsapp.trim())
-      newErrors.phone_whatsapp = 'Phone / WhatsApp is required for fast inquiry response';
+      newErrors.phone_whatsapp = 'Phone number is required for fast inquiry response';
     if (!formData.service_required.trim())
       newErrors.service_required = 'Please select a service';
-    if (!formData.budget_range.trim())
-      newErrors.budget_range = 'Please select a budget range';
     if (!formData.project_details.trim())
       newErrors.project_details = 'Please share a brief note about your project goals';
 
@@ -99,19 +86,6 @@ export const ProjectInquiryForm: React.FC<ProjectInquiryFormProps> = ({
     }
   };
 
-  const getSummaryWhatsAppText = () => {
-    return (
-      `*New Project Inquiry for Cherryworks Studios*\n\n` +
-      `• *Name:* ${formData.full_name}\n` +
-      `• *Brand / Business:* ${formData.business_name || 'N/A'}\n` +
-      `• *Email:* ${formData.email}\n` +
-      `• *Phone / WhatsApp:* ${formData.phone_whatsapp}\n` +
-      `• *Website / Instagram:* ${formData.website_instagram || 'N/A'}\n` +
-      `• *Service:* ${formData.service_required}\n` +
-      `• *Budget Range:* ${formData.budget_range}\n` +
-      `• *Project Details:* ${formData.project_details}`
-    );
-  };
 
   if (isSubmitted) {
     return (
@@ -128,21 +102,17 @@ export const ProjectInquiryForm: React.FC<ProjectInquiryFormProps> = ({
             Thanks, {formData.full_name.split(' ')[0]}! Your message has been sent.
           </h3>
           <p className="font-manrope font-medium text-[14px] text-[#7D7578] max-w-md mx-auto leading-relaxed">
-            Your project details have been recorded. For the fastest response, you can forward this
-            inquiry directly to our team via WhatsApp now.
+            Your project details have been recorded. Our team will review your requirements and respond within 24 business hours.
           </p>
         </div>
 
-        {/* WhatsApp Fast-Forward Action */}
         <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
           <a
-            href={getWhatsAppUrl(getSummaryWhatsAppText())}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={`mailto:${BRAND.email}`}
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#7A0F2E] hover:bg-[#8C1835] text-[#FFFFFF] text-xs font-manrope font-bold uppercase tracking-widest rounded-[2px] transition-all"
           >
-            <MessageCircle className="w-4 h-4" />
-            <span>Forward to WhatsApp Now →</span>
+            <Mail className="w-4 h-4" />
+            <span>Email Studio Directly</span>
           </a>
 
           <button
@@ -233,7 +203,7 @@ export const ProjectInquiryForm: React.FC<ProjectInquiryFormProps> = ({
 
         <div className="space-y-1.5">
           <label className="text-[11px] font-manrope font-semibold uppercase tracking-wider text-[#7D7578] block">
-            Phone / WhatsApp *
+            Phone Number *
           </label>
           <input
             type="tel"
@@ -292,30 +262,6 @@ export const ProjectInquiryForm: React.FC<ProjectInquiryFormProps> = ({
         </div>
       </div>
 
-      {/* Row 5: Budget Range Selection */}
-      <div className="space-y-2">
-        <label className="text-[11px] font-manrope font-semibold uppercase tracking-wider text-[#7D7578] block">
-          Approximate Budget Range *
-        </label>
-        <input type="hidden" name="budget_range" value={formData.budget_range} />
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
-          {budgetOptions.map((bgt) => (
-            <button
-              key={bgt}
-              type="button"
-              onClick={() => setFormData({ ...formData, budget_range: bgt })}
-              className={`p-3 text-left text-xs font-manrope font-medium transition-all rounded-[2px] border ${
-                formData.budget_range === bgt
-                  ? 'bg-[#7A0F2E] border-[#7A0F2E] text-[#FFFFFF]'
-                  : 'bg-[#FFFFFF] border-[#221419] text-[#7D7578] hover:border-[#382029]'
-              }`}
-            >
-              {bgt}
-            </button>
-          ))}
-        </div>
-      </div>
-
       {/* Row 6: Project Details */}
       <div className="space-y-1.5">
         <label className="text-[11px] font-manrope font-semibold uppercase tracking-wider text-[#7D7578] block">
@@ -353,15 +299,7 @@ export const ProjectInquiryForm: React.FC<ProjectInquiryFormProps> = ({
           <span>{isLoading ? 'Sending...' : 'Send Inquiry →'}</span>
         </button>
 
-        <a
-          href={getWhatsAppUrl("Hi Cherryworks Studios, I'd like to chat directly about a new project.")}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-xs font-manrope font-semibold uppercase tracking-wider text-[#E0A0B0] hover:text-[#FFFFFF] flex items-center gap-2 transition-colors py-2 px-3 rounded-[2px] hover:bg-[#7A0F2E]/20"
-        >
-          <MessageCircle className="w-3.5 h-3.5 text-[#E0A0B0]" />
-          <span>Or Chat on WhatsApp Directly →</span>
-        </a>
+
       </div>
     </form>
   );

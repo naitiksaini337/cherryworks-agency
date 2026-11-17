@@ -7,9 +7,7 @@ import { BackgroundVideo } from '@/components/ui/BackgroundVideo';
 import { SectionLabel } from '@/components/ui/SectionLabel';
 import { Accordion } from '@/components/ui/Accordion';
 import { SlideUp, FadeIn, StaggerContainer, StaggerItem } from '@/components/animations/MotionWrappers';
-import { getWhatsAppUrl } from '@/data/siteData';
 import {
-  MessageCircle,
   ArrowRight,
   Sparkles,
   Layers,
@@ -37,7 +35,7 @@ const BUNDLE_STACKS = [
       'Technical SEO, Schema markup & Google Search Console setup',
       'Brand visual identity, typography system & palette',
       'Google My Business & Local SEO dominance',
-      'Automated lead capture & WhatsApp conversion routing',
+      'Automated lead capture & CRM conversion routing',
       'High-speed desktop & mobile optimization',
     ],
     idealFor: 'Startups, studios, and businesses upgrading from cookie-cutter templates.',
@@ -88,11 +86,11 @@ const BUNDLE_STACKS = [
     title: 'The Creator & Personal Brand Stack',
     services: ['Social Media Management', 'Lead Funnel Web Architecture'],
     description:
-      'Turn social media attention into owned revenue. We craft engaging content, manage your distribution, and route high-intent leads straight into your calendar or WhatsApp.',
+      'Turn social media attention into owned revenue. We craft engaging content, manage your distribution, and route high-intent leads straight into your client pipeline.',
     deliverables: [
       'High-converting personal brand portfolio or booking website',
       'Strategic social content production (Reels, Carousels, Stories)',
-      'Automated DM to WhatsApp / Email funnel triggers',
+      'Automated inquiry capture & pipeline routing',
       'Content positioning mentorship & aesthetic curation',
       'Google Sheets client data workflow & booking automation',
       'Weekly performance metrics & growth tracking',
@@ -120,9 +118,9 @@ const PRICING_FAQS = [
       'Absolutely. You are never locked into predefined packages. Whether you need a 3-page custom web application with automated booking, or a full Shopify build with weekly social reels, we will tailor the bundle to match your exact roadmap.',
   },
   {
-    question: 'How fast can I get a quote on WhatsApp?',
+    question: 'How fast can I get a custom project proposal?',
     answer:
-      'You can message us directly on WhatsApp with a short note or voice memo outlining your project and desired services. We typically review your requirements and provide an estimated scope, timeline, and bundle pricing options within a few hours.',
+      'Submit an inquiry through our brief form with a summary of your scope and desired timeline. We review your requirements and provide an estimated architecture breakdown, milestones, and package options within 24 hours.',
   },
   {
     question: 'What are your payment terms and delivery milestones?',
@@ -171,27 +169,22 @@ export default function PricingPage() {
             </div>
 
             <div className="pt-4 flex flex-wrap items-center gap-4">
-              <a
-                href={getWhatsAppUrl(
-                  "Hi Cherryworks, I'd like to combine projects into a bundle and explore bundle discounts for my project scale."
-                )}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-4 text-xs font-manrope font-bold uppercase tracking-[0.15em] bg-[#7A0F2E] text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#050505] transition-all duration-300 rounded-[2px] shadow-lg shadow-[#7A0F2E]/30"
+              <button
+                onClick={() => router.push('/contact')}
+                className="group inline-flex items-center justify-center gap-2.5 px-8 py-4 text-xs font-manrope font-bold uppercase tracking-[0.16em] bg-[#7A0F2E] hover:bg-[#8F1437] text-white transition-all duration-300 rounded-[2px] shadow-[0_0_24px_rgba(122,15,46,0.35)]"
               >
-                <MessageCircle className="w-4 h-4 text-[#E0A0B0] group-hover:text-[#050505] transition-colors" />
-                <span>Discuss WhatsApp Bundle</span>
+                <span>Request Custom Proposal</span>
                 <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" />
-              </a>
+              </button>
 
               <button
                 onClick={() => {
                   const section = document.getElementById('bundle-stacks-section');
                   section?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="inline-flex items-center justify-center gap-2 px-6 py-4 text-xs font-manrope font-semibold uppercase tracking-[0.14em] text-[#E0A0B0] border border-[#7A0F2E]/50 hover:bg-[#7A0F2E]/20 transition-all rounded-[2px]"
+                className="inline-flex items-center justify-center gap-2 px-7 py-4 text-xs font-manrope font-semibold uppercase tracking-[0.14em] text-[#E0A0B0] border border-[#7A0F2E]/50 hover:bg-[#7A0F2E]/20 transition-all rounded-[2px]"
               >
-                <span>Explore Bundle Stacks</span>
+                <span>Explore Bundle Stacks ↓</span>
               </button>
             </div>
           </motion.div>
@@ -285,50 +278,43 @@ export default function PricingPage() {
               </div>
             </div>
 
-            {/* Right WhatsApp Action Card */}
+            {/* Right Action Card */}
             <div className="lg:col-span-5 bg-[#17090F] border border-[#7A0F2E]/70 p-7 sm:p-9 rounded-[2px] space-y-6 shadow-2xl relative">
               <div className="space-y-2">
                 <span className="text-[10px] font-manrope font-bold uppercase tracking-[0.2em] text-[#E0A0B0]">
-                  Direct WhatsApp Access
+                  Studio Consultation
                 </span>
                 <h3 className="font-instrument text-2xl sm:text-3xl text-[#FFFFFF]">
-                  Request Your Custom Bundle Quote
+                  Request Custom Bundle Proposal
                 </h3>
                 <p className="font-lora text-sm text-[#A09895] leading-relaxed">
-                  Tell us what services your brand needs. We will scope the project size and share
-                  discounted bundle packages directly on WhatsApp.
+                  Outline what services your brand requires. We will assess project scope and deliver an architecture proposal with applicable bundle savings.
                 </p>
               </div>
 
-              <div className="p-4 bg-[#0A0507] border border-[#2B141E] rounded-[2px] space-y-2">
-                <div className="flex items-center gap-2 text-xs font-manrope font-semibold text-[#E0A0B0]">
-                  <MessageCircle className="w-4 h-4 text-[#25D366]" />
-                  <span>Instant Studio Response</span>
+              <div className="p-4 bg-[#0A0507] border border-[#2B141E] rounded-[2px] space-y-1.5">
+                <div className="text-xs font-manrope font-semibold text-[#E0A0B0]">
+                  Direct Studio Review
                 </div>
                 <p className="font-lora text-xs text-[#8E8688]">
-                  Chat directly with the founders. No pushy sales calls, no waiting days for a proposal.
+                  Direct review by studio founders. Clear milestones and scope transparency within 24 hours.
                 </p>
               </div>
 
-              <a
-                href={getWhatsAppUrl(
-                  "Hi Cherryworks, I'm interested in combining projects into a bundle. Can you share custom pricing and bundle discounts for my project scale?"
-                )}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full py-4 px-6 bg-[#25D366] text-[#050505] hover:bg-[#1EBE5D] font-manrope font-bold text-xs uppercase tracking-[0.15em] flex items-center justify-center gap-2.5 rounded-[2px] transition-all shadow-lg active:scale-[0.98]"
+              <button
+                onClick={() => router.push('/contact')}
+                className="w-full py-4 px-6 bg-[#7A0F2E] hover:bg-[#8F1437] text-white font-manrope font-bold text-xs uppercase tracking-[0.16em] flex items-center justify-center gap-2 rounded-[2px] transition-all shadow-[0_0_24px_rgba(122,15,46,0.35)] active:scale-[0.98]"
               >
-                <MessageCircle className="w-4 h-4 fill-current" />
-                <span>Chat for WhatsApp Bundle</span>
+                <span>Start Project Brief</span>
                 <ArrowRight className="w-3.5 h-3.5" />
-              </a>
+              </button>
 
               <div className="pt-2 flex items-center justify-center gap-4 text-[11px] font-manrope font-medium text-[#7D7578]">
                 <span>✓ Milestone billing</span>
                 <span>•</span>
                 <span>✓ Zero hidden fees</span>
                 <span>•</span>
-                <span>✓ Fast turnaround</span>
+                <span>✓ Transparent scope</span>
               </div>
             </div>
           </div>
@@ -429,16 +415,13 @@ export default function PricingPage() {
                     </span>
                   </div>
 
-                  <a
-                    href={getWhatsAppUrl(stack.whatsappMessage)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full py-3.5 px-4 bg-[#050505] text-[#FFFFFF] hover:bg-[#7A0F2E] text-xs font-manrope font-bold uppercase tracking-[0.14em] flex items-center justify-center gap-2 rounded-[2px] transition-all duration-300"
+                  <button
+                    onClick={() => router.push('/contact')}
+                    className="w-full py-3.5 px-4 bg-[#050505] hover:bg-[#7A0F2E] text-[#FFFFFF] text-xs font-manrope font-bold uppercase tracking-[0.14em] flex items-center justify-center gap-2 rounded-[2px] transition-all duration-300"
                   >
-                    <MessageCircle className="w-3.5 h-3.5 text-[#E0A0B0]" />
-                    <span>Inquire for This Bundle</span>
+                    <span>Inquire for This Stack</span>
                     <ArrowRight className="w-3.5 h-3.5" />
-                  </a>
+                  </button>
                 </div>
               </SlideUp>
             ))}
@@ -515,52 +498,33 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* 6. FINAL BOTTOM CTA */}
-      <section className="px-5 sm:px-8 lg:px-12 py-24 sm:py-32 bg-[#7A0F2E] text-[#FFFFFF]">
-        <div className="max-w-5xl mx-auto text-center space-y-10">
-          <SlideUp className="space-y-6">
-            <h2 className="font-instrument text-5xl sm:text-6xl md:text-7xl tracking-tight">
-              Ready to scope your custom bundle?
-            </h2>
-            <p className="font-lora text-xl text-[#F4F0EC] max-w-2xl mx-auto opacity-90">
-              Tell us what you are building. We will assess your scale, apply applicable bundle
-              discounts, and give you an immediate, transparent proposal.
-            </p>
-          </SlideUp>
+      {/* 6. FINAL CTA - Minimalist */}
+      <section className="relative py-24 sm:py-32 px-5 sm:px-8 lg:px-12 bg-[#050505] border-t border-[#1C1417] text-center overflow-hidden bg-grain">
+        {/* Subtle ambient cherry aura */}
+        <div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-[200px] pointer-events-none -z-0 opacity-40"
+          style={{
+            background:
+              'radial-gradient(ellipse 60% 40% at 50% 50%, rgba(122, 15, 46, 0.2), transparent 70%)',
+          }}
+        />
 
-          <SlideUp delay={0.2} className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <a
-              href={getWhatsAppUrl(
-                "Hi Cherryworks, I want to discuss a custom project bundle and see what discounts are available for my project."
-              )}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto px-8 py-4 bg-[#FFFFFF] text-[#7A0F2E] hover:bg-[#050505] hover:text-[#FFFFFF] text-[12px] font-manrope font-bold uppercase tracking-[0.15em] flex items-center justify-center gap-2 rounded-[2px] transition-all shadow-xl"
-            >
-              <MessageCircle className="w-4 h-4" />
-              <span>Claim WhatsApp Bundle Discount</span>
-              <ArrowRight className="w-4 h-4" />
-            </a>
+        <FadeIn className="relative z-10 max-w-3xl mx-auto space-y-8">
+          <h2 className="font-instrument text-4xl sm:text-6xl md:text-7xl text-white font-normal tracking-tight leading-[1.05]">
+            Let&apos;s build something <br className="hidden sm:inline" />
+            <span className="italic font-light text-[#E0A0B0]">worth scaling.</span>
+          </h2>
 
+          <div className="pt-2 flex justify-center">
             <button
               onClick={() => router.push('/contact')}
-              className="w-full sm:w-auto px-8 py-4 bg-transparent border border-[#FFFFFF]/40 text-[#FFFFFF] hover:bg-[#FFFFFF]/10 text-[12px] font-manrope font-bold uppercase tracking-[0.15em] flex items-center justify-center gap-2 rounded-[2px] transition-all"
+              className="group inline-flex items-center gap-2.5 px-8 py-4 bg-[#7A0F2E] hover:bg-[#8F1437] text-white font-manrope text-xs font-bold uppercase tracking-[0.18em] rounded-[2px] transition-all duration-300 shadow-[0_0_24px_rgba(122,15,46,0.35)] hover:shadow-[0_0_36px_rgba(224,160,176,0.25)]"
             >
-              <span>Submit Project Brief</span>
+              <span>Start a Project</span>
+              <ArrowRight className="w-4 h-4 text-[#E0A0B0] transition-transform duration-300 group-hover:translate-x-1" />
             </button>
-          </SlideUp>
-
-          <FadeIn delay={0.4} className="flex flex-wrap items-center justify-center gap-6 text-[12px] font-manrope font-medium text-[#E0A0B0] pt-8">
-            <div className="flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4" />
-              <span>Milestone-Based Guarantees</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Clock className="w-4 h-4" />
-              <span>Fast Turnaround on Proposals</span>
-            </div>
-          </FadeIn>
-        </div>
+          </div>
+        </FadeIn>
       </section>
     </div>
   );

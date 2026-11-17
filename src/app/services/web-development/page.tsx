@@ -5,13 +5,14 @@ import React from 'react';
 import { useRouter } from 'next/navigation';
 import { SectionLabel } from '@/components/ui/SectionLabel';
 import { PrimaryButton } from '@/components/ui/Buttons';
-import { getWhatsAppUrl } from '@/data/siteData';
+
 import { Accordion } from '@/components/ui/Accordion';
 import { SlideUp, StaggerContainer, StaggerItem, FadeIn } from '@/components/animations/MotionWrappers';
 import { FluidExpandingGrid } from '@/components/ui/fluid-expanding-grid';
 import { 
-  MessageCircle, 
-  ArrowRight, 
+  Mail, 
+  ArrowRight,
+  ArrowUpRight, 
   Zap,
   TrendingUp,
   Target,
@@ -95,19 +96,14 @@ export default function WebDevelopmentPage() {
               Stop losing leads to a slow, confusing website. We build lightning-fast, custom Next.js experiences designed exclusively to turn clicks into clients.
             </p>
 
-            <div className="pt-6 flex flex-wrap items-center gap-4">
-              <PrimaryButton variant="light" onClick={() => router.push('/contact')}>
-                START YOUR PROJECT →
-              </PrimaryButton>
-              <a
-                href={getWhatsAppUrl("Hi Cherryworks, I'm interested in building a custom website for my business.")}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3.5 border border-[#7A0F2E]/50 bg-[#0A0507]/50 backdrop-blur-sm text-[11px] font-manrope font-semibold uppercase tracking-widest text-[#E0A0B0] hover:bg-[#7A0F2E] hover:text-[#FFFFFF] transition-all rounded-[2px]"
+            <div className="pt-6 flex items-center">
+              <button
+                onClick={() => router.push('/contact')}
+                className="group inline-flex items-center gap-2.5 px-8 py-4 bg-[#7A0F2E] hover:bg-[#8F1437] text-white font-manrope text-xs font-bold uppercase tracking-[0.16em] rounded-[2px] transition-all duration-300 shadow-[0_0_24px_rgba(122,15,46,0.35)]"
               >
-                <MessageCircle className="w-4 h-4" />
-                <span>Discuss on WhatsApp</span>
-              </a>
+                <span>Start Web Architecture</span>
+                <ArrowUpRight className="w-4 h-4 text-[#E0A0B0] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </button>
             </div>
           </SlideUp>
         </div>
@@ -212,47 +208,32 @@ export default function WebDevelopmentPage() {
       </section>
 
       {/* 6. FINAL CTA (Urgency & Risk-Reversal) */}
-      <section className="px-5 sm:px-8 lg:px-12 py-24 sm:py-32 bg-[#7A0F2E] text-[#FFFFFF]">
-        <div className="max-w-5xl mx-auto text-center space-y-10">
-          <SlideUp className="space-y-6">
-            <h2 className="font-instrument text-5xl sm:text-6xl md:text-7xl tracking-tight">
-              Stop losing money to a bad website.
-            </h2>
-            <p className="font-lora text-xl text-[#F4F0EC] max-w-2xl mx-auto opacity-90">
-              Get a custom-engineered digital storefront with fixed-price milestone delivery, zero hidden fees, and absolute transparency.
-            </p>
-          </SlideUp>
+            {/* 6. FINAL CTA - Minimalist */}
+      <section className="relative py-24 sm:py-32 px-5 sm:px-8 lg:px-12 bg-[#050505] border-t border-[#1C1417] text-center overflow-hidden bg-grain">
+        <div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-[200px] pointer-events-none -z-0 opacity-40"
+          style={{
+            background:
+              'radial-gradient(ellipse 60% 40% at 50% 50%, rgba(122, 15, 46, 0.2), transparent 70%)',
+          }}
+        />
 
-          <SlideUp delay={0.2} className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+        <FadeIn className="relative z-10 max-w-3xl mx-auto space-y-8">
+          <h2 className="font-instrument text-4xl sm:text-6xl md:text-7xl text-white font-normal tracking-tight leading-[1.05]">
+            Let&apos;s build something <br className="hidden sm:inline" />
+            <span className="italic font-light text-[#E0A0B0]">worth scaling.</span>
+          </h2>
+
+          <div className="pt-2 flex justify-center">
             <button
               onClick={() => router.push('/contact')}
-              className="w-full sm:w-auto px-8 py-4 bg-[#FFFFFF] text-[#7A0F2E] hover:bg-[#050505] hover:text-[#FFFFFF] text-[12px] font-manrope font-bold uppercase tracking-[0.15em] flex items-center justify-center gap-2 rounded-[2px] transition-all"
+              className="group inline-flex items-center gap-2.5 px-8 py-4 bg-[#7A0F2E] hover:bg-[#8F1437] text-white font-manrope text-xs font-bold uppercase tracking-[0.18em] rounded-[2px] transition-all duration-300 shadow-[0_0_24px_rgba(122,15,46,0.35)] hover:shadow-[0_0_36px_rgba(224,160,176,0.25)]"
             >
-              <span>Request a Quote Today</span>
-              <ArrowRight className="w-4 h-4" />
+              <span>Start a Project</span>
+              <ArrowUpRight className="w-4 h-4 text-[#E0A0B0] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </button>
-            <a
-              href={getWhatsAppUrl("Hi Cherryworks, I want to discuss a new website.")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto px-8 py-4 bg-transparent border border-[#FFFFFF]/30 text-[#FFFFFF] hover:bg-[#FFFFFF]/10 text-[12px] font-manrope font-bold uppercase tracking-[0.15em] flex items-center justify-center gap-2 rounded-[2px] transition-all"
-            >
-              <MessageCircle className="w-4 h-4" />
-              <span>Chat with us first</span>
-            </a>
-          </SlideUp>
-          
-          <FadeIn delay={0.4} className="flex items-center justify-center gap-6 text-[12px] font-manrope font-medium text-[#E0A0B0] pt-8">
-            <div className="flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4" />
-              <span>Fixed Price Guarantee</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Clock className="w-4 h-4" />
-              <span>Fast Turnaround</span>
-            </div>
-          </FadeIn>
-        </div>
+          </div>
+        </FadeIn>
       </section>
     </div>
   );

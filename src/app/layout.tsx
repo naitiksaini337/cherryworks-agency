@@ -3,8 +3,6 @@ import { Manrope, Instrument_Serif, Lora } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-// Force TS re-parse
-import { WhatsAppFloating } from "@/components/ui/WhatsAppFloating";
 import { BRAND } from "@/data/siteData";
 
 const manrope = Manrope({
@@ -64,7 +62,6 @@ export default function RootLayout({
               "url": "https://cherryworks.in",
               "logo": "https://cherryworks.in/cherryworkslogo.svg",
               "email": BRAND.email,
-              "telephone": BRAND.whatsappNumber,
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Worldwide",
@@ -75,7 +72,6 @@ export default function RootLayout({
         />
         <Navbar />
         <main className="flex-grow">{children}</main>
-        <WhatsAppFloating />
         <Footer />
       </body>
     </html>

@@ -2,11 +2,10 @@
 
 import { BackgroundVideo } from '@/components/ui/BackgroundVideo';
 import React from 'react';
-import { ABOUT_BELIEFS, FAQS, getWhatsAppUrl } from '@/data/siteData';
+import { ABOUT_BELIEFS, FAQS } from '@/data/siteData';
 import { SectionLabel } from '@/components/ui/SectionLabel';
 import { PrimaryButton } from '@/components/ui/Buttons';
-import { MessageCircle, ArrowRight } from 'lucide-react';
-import WarpShader from '@/components/ui/wrap-shader';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 import { SlideUp, FadeIn, StaggerContainer } from '@/components/animations/MotionWrappers';
 import { Accordion } from '@/components/ui/Accordion';
@@ -36,14 +35,16 @@ export default function AboutPage() {
               <span className="italic text-[#E0A0B0] font-light">better than guesswork.</span>
             </h1>
             <p className="font-lora text-lg sm:text-xl text-white/90 max-w-2xl leading-relaxed drop-shadow-md">
-              We combine creative direction, intelligent automation, and practical business execution to help brands grow predictably.
+              We unify creative direction, modern web engineering, and commercial clarity for ambitious brands.
             </p>
 
             <div className="pt-4 flex flex-wrap gap-4 items-center">
-              <Link href="/contact">
-                <PrimaryButton variant="cherry">
-                  WORK WITH US <ArrowRight className="w-4 h-4 ml-2 inline-block" />
-                </PrimaryButton>
+              <Link
+                href="/contact"
+                className="group inline-flex items-center gap-2.5 px-8 py-4 bg-[#7A0F2E] hover:bg-[#8F1437] text-white font-manrope text-xs font-bold uppercase tracking-[0.18em] rounded-[2px] transition-all duration-300 shadow-[0_0_24px_rgba(122,15,46,0.35)]"
+              >
+                <span>Start a Project</span>
+                <ArrowUpRight className="w-4 h-4 text-[#E0A0B0] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
             </div>
           </SlideUp>
@@ -56,29 +57,27 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <StaggerContainer className="space-y-8 order-2 lg:order-1">
               <SlideUp>
-                <SectionLabel label="THE INDUSTRY PROBLEM" dotColor="cherry" theme="light" />
+                <SectionLabel label="THE PROBLEM" dotColor="cherry" theme="light" />
                 <h2 className="font-instrument text-4xl sm:text-5xl md:text-6xl text-[#050505] tracking-tight leading-[1.05] mt-6">
-                  Most agencies isolate <span className="italic text-[#7A0F2E]">design from growth.</span>
+                  Design isolated from <span className="italic text-[#7A0F2E]">commercial reality.</span>
                 </h2>
               </SlideUp>
 
               <SlideUp>
-                <p className="font-lora text-[17px] sm:text-[19px] text-[#504A4C] leading-relaxed">
-                  Business owners often find themselves choosing between beautiful branding that doesn't convert, or high-converting funnels that look cheap.
-                  Digital growth shouldn't be a disjointed puzzle of tools, slow websites, and uncoordinated marketing efforts.
+                <p className="font-lora text-[16px] sm:text-[18px] text-[#504A4C] leading-relaxed">
+                  Founders are often forced into a false choice: aesthetic branding that generates zero leads, or aggressive sales templates that dilute brand authority.
                 </p>
               </SlideUp>
 
-              <SlideUp className="space-y-4 pt-4">
+              <SlideUp className="space-y-3 pt-2">
                 {[
-                  "Agencies that don't understand your sales process.",
-                  "Beautiful websites that fail to capture leads.",
-                  "Social media that looks good but brings no revenue.",
-                  "Disjointed tech stacks that create more manual work."
+                  "Agencies disconnected from revenue metrics",
+                  "Pleasing storefronts with zero conversion intent",
+                  "Sluggish templates creating ongoing customer friction"
                 ].map((pain, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#7A0F2E] mt-2.5 shrink-0" />
-                    <p className="font-lora text-[16px] text-[#3A3537] leading-relaxed">{pain}</p>
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#7A0F2E] mt-2 shrink-0" />
+                    <p className="font-lora text-[15px] text-[#3A3537] leading-relaxed">{pain}</p>
                   </div>
                 ))}
               </SlideUp>
@@ -89,8 +88,8 @@ export default function AboutPage() {
                 <div className="absolute inset-0 bg-[url('/images/animated/3.jpeg')] bg-cover bg-center opacity-90 mix-blend-multiply" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1C1417]/80 via-transparent to-transparent" />
                 <div className="absolute bottom-8 left-8 right-8 text-white">
-                  <p className="font-instrument text-2xl mb-2">The gap we saw.</p>
-                  <p className="font-lora text-white/80 text-sm">We realized there had to be a way to merge premium aesthetics with ruthless conversion architecture.</p>
+                  <p className="font-instrument text-2xl mb-2">The standard.</p>
+                  <p className="font-lora text-white/80 text-sm">Merging refined editorial taste with rigorous conversion engineering.</p>
                 </div>
               </div>
             </FadeIn>
@@ -117,26 +116,25 @@ export default function AboutPage() {
               <SlideUp>
                 <SectionLabel label="OUR APPROACH" dotColor="cherry" theme="light" />
                 <h2 className="font-instrument text-4xl sm:text-5xl md:text-6xl text-[#050505] tracking-tight leading-[1.05] mt-6">
-                  A unified engine for <span className="italic text-[#7A0F2E]">digital growth.</span>
+                  A unified system for <span className="italic text-[#7A0F2E]">digital growth.</span>
                 </h2>
               </SlideUp>
 
               <SlideUp>
-                <p className="font-lora text-[17px] sm:text-[19px] text-[#504A4C] leading-relaxed">
-                  Cherryworks was founded on a simple premise: a brand's digital presence should not be a complex puzzle.
-                  We set out to build a studio that unifies design, technology, and automation—delivering high-performing digital assets that just work and drive real commercial growth.
+                <p className="font-lora text-[16px] sm:text-[18px] text-[#504A4C] leading-relaxed">
+                  Cherryworks unites visual craft, modern web engineering, and organic discovery into a single cohesive system. Clean deliverables built to endure and convert.
                 </p>
               </SlideUp>
 
-              <SlideUp className="space-y-4 pt-4">
+              <SlideUp className="space-y-3 pt-2">
                 {[
-                  "Premium Aesthetics: Design that commands authority.",
-                  "Conversion Architecture: Engineered for user action.",
-                  "Intelligent Automation: Scale without manual friction."
+                  "Editorial Craft: Visual design that commands respect",
+                  "Conversion Flow: Clear architecture engineered for user action",
+                  "Modern Performance: Clean code and sub-second load times"
                 ].map((pillar, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#7A0F2E] mt-2.5 shrink-0" />
-                    <p className="font-lora text-[16px] text-[#3A3537] leading-relaxed">{pillar}</p>
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#7A0F2E] mt-2 shrink-0" />
+                    <p className="font-lora text-[15px] text-[#3A3537] leading-relaxed">{pillar}</p>
                   </div>
                 ))}
               </SlideUp>
@@ -212,57 +210,33 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 6. FINAL CTA (Edge-to-Edge Dramatic) */}
-      <section className="relative py-28 sm:py-36 md:py-44 px-5 sm:px-8 lg:px-12 bg-[#050505] text-center flex flex-col items-center justify-center overflow-hidden">
-        <WarpShader
-          colors={[
-            "hsl(340, 85%, 15%)",
-            "hsl(345, 60%, 72%)",
-            "hsl(343, 78%, 28%)",
-            "hsl(348, 50%, 82%)",
-          ]}
-          speed={0.8}
-          className="opacity-70"
+      {/* 6. FINAL CTA - Minimalist */}
+      <section className="relative py-24 sm:py-32 px-5 sm:px-8 lg:px-12 bg-[#050505] border-t border-[#1C1417] text-center overflow-hidden bg-grain">
+        {/* Subtle ambient cherry aura */}
+        <div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-[200px] pointer-events-none -z-0 opacity-40"
+          style={{
+            background:
+              'radial-gradient(ellipse 60% 40% at 50% 50%, rgba(122, 15, 46, 0.2), transparent 70%)',
+          }}
         />
 
-        <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px] pointer-events-none z-0"></div>
+        <FadeIn className="relative z-10 max-w-3xl mx-auto space-y-8">
+          <h2 className="font-instrument text-4xl sm:text-6xl md:text-7xl text-white font-normal tracking-tight leading-[1.05]">
+            Let&apos;s build something <br className="hidden sm:inline" />
+            <span className="italic font-light text-[#E0A0B0]">worth scaling.</span>
+          </h2>
 
-        <div className="relative z-10 space-y-8 max-w-4xl mx-auto">
-          <SlideUp>
-            <SectionLabel label="READY TO GROW?" dotColor="sakura" className="justify-center" />
-          </SlideUp>
-
-          <SlideUp>
-            <h3 className="font-instrument text-5xl sm:text-7xl md:text-8xl text-white tracking-tight leading-[0.95]">
-              Let's build something <br />
-              <span className="italic text-[#E0A0B0] font-light">worth scaling.</span>
-            </h3>
-          </SlideUp>
-
-          <SlideUp>
-            <p className="font-lora text-lg sm:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
-              Tell us where you are, where you want to go, and we'll help build the digital system to
-              get you there.
-            </p>
-          </SlideUp>
-
-          <SlideUp className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/contact">
-              <PrimaryButton variant="cherry">
-                START A PROJECT <ArrowRight className="w-4 h-4 ml-2 inline-block" />
-              </PrimaryButton>
-            </Link>
-            <a
-              href={getWhatsAppUrl("Hi Cherryworks Studios, I'd like to discuss a project.")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-black/40 backdrop-blur-sm border border-[#E0A0B0]/40 text-[#E0A0B0] hover:bg-[#7A0F2E] hover:text-[#FFFFFF] text-xs font-manrope font-semibold uppercase tracking-widest transition-all rounded-[2px]"
+          <div className="pt-2 flex justify-center">
+            <Link
+              href="/contact"
+              className="group inline-flex items-center gap-2.5 px-8 py-4 bg-[#7A0F2E] hover:bg-[#8F1437] text-white font-manrope text-xs font-bold uppercase tracking-[0.18em] rounded-[2px] transition-all duration-300 shadow-[0_0_24px_rgba(122,15,46,0.35)] hover:shadow-[0_0_36px_rgba(224,160,176,0.25)]"
             >
-              <MessageCircle className="w-4 h-4" />
-              <span>Chat on WhatsApp →</span>
-            </a>
-          </SlideUp>
-        </div>
+              <span>Start a Project</span>
+              <ArrowUpRight className="w-4 h-4 text-[#E0A0B0] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </Link>
+          </div>
+        </FadeIn>
       </section>
     </div>
   );

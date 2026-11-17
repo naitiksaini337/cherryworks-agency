@@ -1,6 +1,5 @@
 import React from 'react';
-import { ArrowRight, Check, Sparkles, MessageCircle } from 'lucide-react';
-import { getWhatsAppUrl } from '../../data/siteData';
+import { ArrowRight, Check, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 interface CustomQuoteCardProps {
@@ -47,7 +46,7 @@ export const CustomQuoteCard: React.FC<CustomQuoteCardProps> = ({ onStartQuote }
             </div>
             <div className="flex items-start gap-2.5 text-[14px] font-manrope font-medium text-[#E4DFDD]">
               <Check className="w-4 h-4 text-[#7A0F2E] flex-shrink-0 mt-0.5" />
-              <span>Full Google & WhatsApp integrations</span>
+              <span>Analytics, CRM & intake integrations</span>
             </div>
             <div className="flex items-start gap-2.5 text-[14px] font-manrope font-medium text-[#E4DFDD]">
               <Check className="w-4 h-4 text-[#7A0F2E] flex-shrink-0 mt-0.5" />
@@ -87,25 +86,14 @@ export const CustomQuoteCard: React.FC<CustomQuoteCardProps> = ({ onStartQuote }
             </p>
           </div>
 
-          <div className="pt-4 space-y-3">
+          <div className="pt-4">
             <button
               onClick={onStartQuote}
-              className="w-full py-3.5 px-5 bg-[#7A0F2E] text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#050505] text-xs font-manrope font-bold uppercase tracking-[0.15em] flex items-center justify-center gap-2 rounded-[2px] transition-all duration-300 active:scale-[0.98]"
+              className="w-full py-4 px-5 bg-[#7A0F2E] hover:bg-[#8F1437] text-[#FFFFFF] text-xs font-manrope font-bold uppercase tracking-[0.16em] flex items-center justify-center gap-2 rounded-[2px] transition-all duration-300 active:scale-[0.98] shadow-[0_0_20px_rgba(122,15,46,0.3)]"
             >
               <span>Get a Custom Quote</span>
               <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
             </button>
-            <a
-              href={getWhatsAppUrl(
-                "Hi Cherryworks, I'd like to get a custom quote for a bespoke web development project."
-              )}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full py-3 text-center text-[11px] font-manrope font-bold uppercase tracking-[0.15em] text-[#A09895] hover:text-[#E0A0B0] flex items-center justify-center gap-2 transition-colors"
-            >
-              <MessageCircle className="w-3.5 h-3.5" />
-              <span>Discuss on WhatsApp</span>
-            </a>
           </div>
         </div>
       </div>

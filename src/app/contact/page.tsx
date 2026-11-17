@@ -4,10 +4,10 @@ import { BackgroundVideo } from '@/components/ui/BackgroundVideo';
 import React from 'react';
 import { useRouter } from 'next/navigation';
 
-import { BRAND, getWhatsAppUrl } from '@/data/siteData';
+import { BRAND } from '@/data/siteData';
 import { SectionLabel } from '@/components/ui/SectionLabel';
 import { ProjectInquiryForm } from '@/components/forms/ProjectInquiryForm';
-import { Mail, MessageCircle, MapPin, Clock, ArrowUpRight, ShieldCheck } from 'lucide-react';
+import { Mail, MapPin, Clock, ArrowUpRight, ShieldCheck } from 'lucide-react';
 import { FadeIn, SlideUp, StaggerContainer, StaggerItem } from '@/components/animations/MotionWrappers';
 
 interface ContactPageProps {
@@ -74,22 +74,10 @@ export default function ContactPage() {
             <SlideUp delay={0.3} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
               <button
                 onClick={scrollToForm}
-                className="inline-flex items-center justify-center px-6 sm:px-7 py-3.5 bg-[#EAE4E1] text-[#050505] hover:bg-[#FFFFFF] text-xs font-manrope font-bold uppercase tracking-widest transition-all rounded-[2px] active:scale-95 shadow-lg"
+                className="inline-flex items-center justify-center px-8 py-4 bg-[#7A0F2E] hover:bg-[#8F1437] text-white text-xs font-manrope font-bold uppercase tracking-widest transition-all rounded-[2px] active:scale-95 shadow-[0_0_24px_rgba(122,15,46,0.35)]"
               >
                 START AN INQUIRY ↓
               </button>
-
-              <a
-                href={getWhatsAppUrl(
-                  "Hi Cherryworks, I'm reaching out directly to discuss a project."
-                )}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3.5 bg-[#7A0F2E] hover:bg-[#8C1835] text-[#FFFFFF] text-xs font-manrope font-bold uppercase tracking-widest transition-all rounded-[2px] shadow-[0_0_24px_rgba(122,15,46,0.4)] border border-[#A3163E] active:scale-95"
-              >
-                <MessageCircle className="w-4 h-4 text-[#FFFFFF]" />
-                <span>CHAT ON WHATSAPP →</span>
-              </a>
             </SlideUp>
           </div>
         </div>
@@ -118,45 +106,7 @@ export default function ContactPage() {
 
             {/* Direct Channel Cards */}
             <StaggerContainer className="space-y-4">
-              {/* WhatsApp Card - Highlighted */}
-              <StaggerItem>
-                <a
-                  href={getWhatsAppUrl(
-                    "Hi Cherryworks, I'm reaching out directly to discuss a project."
-                  )}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-6 bg-gradient-to-br from-[#200A13] via-[#14060C] to-[#0A0709] border border-[#7A0F2E] shadow-[0_4px_30px_rgba(122,15,46,0.3)] hover:shadow-[0_4px_40px_rgba(122,15,46,0.5)] hover:border-[#A3163E] rounded-[2px] block group transition-all relative overflow-hidden"
-                >
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-[#7A0F2E]/10 rounded-full blur-2xl pointer-events-none" />
-                  <div className="flex items-center justify-between relative z-10">
-                    <div className="flex items-center gap-3.5">
-                      <div className="w-11 h-11 rounded-full bg-[#7A0F2E] border border-[#A3163E] flex items-center justify-center text-[#FFFFFF] shadow-md group-hover:scale-105 transition-transform">
-                        <MessageCircle className="w-5 h-5" />
-                      </div>
-                      <div>
-                        <div className="flex items-center gap-2">
-                          <span className="text-[10px] font-manrope font-bold uppercase tracking-wider text-[#E0A0B0]">
-                            Priority Fast Channel
-                          </span>
-                          <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-manrope font-bold uppercase bg-[#7A0F2E] text-[#FFFFFF] tracking-wider">
-                            Instant
-                          </span>
-                        </div>
-                        <div className="font-instrument text-xl sm:text-2xl text-[#FFFFFF] group-hover:text-[#E0A0B0] transition-colors mt-0.5">
-                          Chat on WhatsApp
-                        </div>
-                      </div>
-                    </div>
-                    <div className="w-8 h-8 rounded-full bg-[#7A0F2E]/20 border border-[#7A0F2E] flex items-center justify-center text-[#FFFFFF] group-hover:bg-[#7A0F2E] transition-all">
-                      <ArrowUpRight className="w-4 h-4 text-[#FFFFFF] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                    </div>
-                  </div>
-                  <p className="text-xs font-manrope font-medium text-[#D0C8C5] mt-3.5 relative z-10">
-                    Direct chat with the studio for fast quotes, brief discussions, and immediate project questions.
-                  </p>
-                </a>
-              </StaggerItem>
+
 
               {/* Email Card */}
               <StaggerItem>
@@ -206,8 +156,7 @@ export default function ContactPage() {
             <SlideUp delay={0.2} className="p-4 bg-[#120B0E] border border-[#26151C] rounded-[2px] flex items-start gap-3 text-xs font-manrope font-medium text-[#A09895]">
               <Clock className="w-4 h-4 text-[#E0A0B0] flex-shrink-0 mt-0.5" />
               <span>
-                Standard inquiry response turnaround is under 24 hours. WhatsApp inquiries are
-                typically acknowledged in real-time.
+                Standard inquiry response turnaround is under 24 hours with dedicated scope, milestone, and architecture breakdowns.
               </span>
             </SlideUp>
           </div>

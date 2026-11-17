@@ -4,8 +4,8 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Logo } from '../brand/Logo';
-import { SERVICES_LIST, getWhatsAppUrl } from '../../data/siteData';
-import { ChevronDown, Menu, X, MessageCircle } from 'lucide-react';
+import { SERVICES_LIST } from '../../data/siteData';
+import { ChevronDown, Menu, X } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
   const pathname = usePathname();
@@ -133,16 +133,6 @@ export const Navbar: React.FC = () => {
 
           {/* Action CTAs */}
           <div className="hidden lg:flex items-center gap-4">
-            <a
-              href={getWhatsAppUrl("Hi Cherryworks Studios, I'd like to ask about your digital growth services.")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-3.5 py-2 text-[14px] font-manrope font-bold uppercase tracking-[0.12em] text-[#E4DFDD] hover:text-[#FFFFFF] transition-colors"
-            >
-              <MessageCircle className="w-3.5 h-3.5 text-[#E0A0B0]" />
-              <span>WhatsApp</span>
-            </a>
-
             <Link
               href="/contact"
               onClick={handleNavClick}
@@ -243,7 +233,7 @@ export const Navbar: React.FC = () => {
             </nav>
           </div>
 
-          <div className="space-y-3 pt-6 border-t border-[#1F1418]">
+          <div className="pt-6 border-t border-[#1F1418]">
             <Link
               href="/contact"
               onClick={handleNavClick}
@@ -251,15 +241,6 @@ export const Navbar: React.FC = () => {
             >
               Start a Project →
             </Link>
-            <a
-              href={getWhatsAppUrl()}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full py-3 text-center text-xs font-manrope font-semibold uppercase tracking-[0.15em] text-[#E0A0B0] border border-[#7A0F2E]/40 flex items-center justify-center gap-2 rounded-[2px]"
-            >
-              <MessageCircle className="w-3.5 h-3.5" />
-              <span>Chat on WhatsApp →</span>
-            </a>
           </div>
         </div>
       )}

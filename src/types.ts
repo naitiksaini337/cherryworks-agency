@@ -74,7 +74,7 @@ export interface InquiryFormData {
   phone_whatsapp: string;
   website_instagram: string;
   service_required: string;
-  budget_range: string;
+  budget_range?: string;
   project_details: string;
   bot_field?: string;
 }

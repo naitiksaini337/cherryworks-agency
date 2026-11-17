@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { PricingTier } from '../../types';
-import { Check, MessageCircle, ArrowRight, Sparkles, ChevronDown, ChevronUp } from 'lucide-react';
-import { getWhatsAppUrl } from '../../data/siteData';
+import { Check, ArrowRight, Sparkles, ChevronDown, ChevronUp } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 interface PricingCardProps {
@@ -18,7 +17,6 @@ export const PricingCard: React.FC<PricingCardProps> = ({
   index = 0,
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const whatsappText = `Hi Cherryworks, I'm interested in the ${serviceCategory} (${tier.name} tier: ${tier.price}${tier.billingPeriod || ''}).`;
 
   // Determine styles based on tier popularity
   const isDark = tier.isPopular;
@@ -119,24 +117,14 @@ export const PricingCard: React.FC<PricingCardProps> = ({
       </div>
 
       {/* Actions */}
-      <div className={`relative z-10 pt-6 mt-8 border-t ${dividerClasses} space-y-3`}>
+      <div className={`relative z-10 pt-6 mt-8 border-t ${dividerClasses}`}>
         <button
           onClick={onSelect}
-          className={`w-full py-3 px-4 text-xs font-manrope font-bold uppercase tracking-[0.14em] flex items-center justify-center gap-2 rounded-[2px] transition-all duration-300 active:scale-[0.98] ${primaryButtonClasses}`}
+          className={`w-full py-3.5 px-4 text-xs font-manrope font-bold uppercase tracking-[0.14em] flex items-center justify-center gap-2 rounded-[2px] transition-all duration-300 active:scale-[0.98] ${primaryButtonClasses}`}
         >
           <span>Select {tier.name}</span>
           <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
         </button>
-
-        <a
-          href={getWhatsAppUrl(whatsappText)}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`w-full py-2.5 text-center text-[11px] font-manrope font-semibold uppercase tracking-[0.12em] flex items-center justify-center gap-2 transition-colors ${secondaryButtonClasses}`}
-        >
-          <MessageCircle className="w-3.5 h-3.5" />
-          <span>Ask on WhatsApp</span>
-        </a>
       </div>
     </motion.div>
   );
